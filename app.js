@@ -56,11 +56,12 @@ app.post('/interactions', async function (req, res) {
     // "roll" command
     if (name === 'roll') {
       // Send a message into the channel where command was triggered from
+      const userId = req.body.member.user.id;
       var modifier = data.hasOwnProperty("options") ? data["options"][0]["value"] : 0;
       console.log('modifier is ' + modifier);
       var roll = getRoll(modifier);
       console.log('modified roll is ' + roll);
-      var message = '**Roll:** 1d10 (';
+      var message = `<@${userId}>` + '\n**Roll:** 1d10 (';
 
       //format output
       if (roll - modifier >= 10)
