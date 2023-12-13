@@ -43,6 +43,14 @@ const CHALLENGE_COMMAND = {
 const ROLL_COMMAND = {
   name: 'roll',
   description: 'Roll a d10',
+  options: [
+    {
+      type: 4,
+      name: 'modifier',
+      description: 'Add a modifier to the roll',
+      required: false,
+    }
+  ],
   type: 1,
 };
 
