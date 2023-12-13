@@ -52,6 +52,8 @@ app.post('/interactions', async function (req, res) {
         },
       });
     }
+
+    // "challenge" command
   }
 });
 
