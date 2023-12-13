@@ -40,6 +40,12 @@ const CHALLENGE_COMMAND = {
   type: 1,
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+const ROLL_COMMAND = {
+  name: 'roll',
+  description: 'Roll a d10',
+  type: 1,
+};
+
+const ALL_COMMANDS = [TEST_COMMAND, ROLL_COMMAND];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
