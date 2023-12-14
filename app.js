@@ -105,14 +105,8 @@ app.post('/interactions', async function (req, res) {
     {
       var filepath = './datapool/items/';
       var entry;
-      if (data["options"].hasOwnProperty(1))
-      {
-        entry = findEntryInJSON(data["options"][0]["value"], filepath + data["options"][1]["value"])
-      }
-      else
-      {
-        entry = findEntryInDirectory(data["options"][0]["value"], filepath)
-      }
+      
+      entry = findEntryInJSON(data["options"][1]["value"], filepath + data["options"][0]["value"]);
 
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,

@@ -11,18 +11,10 @@ function getCategoryChoices(directory)
   for (let file of files) {
     console.log("file name : " + file.split(".")[0]);
 
-    //for each entry in file
-    var json = JSON.parse(fs.readFileSync(directory + file))
-    console.log(json);
-
-    for (let entry of json)
-    {
-      console.log(entry);
-      choices.push({
-        name: capitalize(file.split(".")[0] + ': ' + entry["name"]),
-        value: entry["name"],
-      });
-    }
+    choices.push({
+      name: capitalize(file.split(".")[0]),
+      value: file,
+    });
   }
   return choices;
 }
@@ -70,7 +62,8 @@ const ITEM_COMMAND = {
       type: 3,
       name: 'category',
       description: 'The type of item you want to look up',
-      required: false,
+      required: true,
+      choices: getCategoryChoices('./datapool/items'),
     },
     {
       type: 3,
