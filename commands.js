@@ -19,13 +19,7 @@ function getCategoryChoices(directory)
   return choices;
 }
 
-// Simple test command
-const TEST_COMMAND = {
-  name: 'test',
-  description: 'Basic command',
-  type: 1,
-};
-
+//dice rolling command
 const ROLL_COMMAND = {
   name: 'roll',
   description: 'Roll a d10',
@@ -75,6 +69,6 @@ const ITEM_COMMAND = {
   type: 1,
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND];
+const ALL_COMMANDS = [ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
