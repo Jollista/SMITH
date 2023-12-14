@@ -441,139 +441,139 @@
         "name" : "Scratchers",
         "cost" : "100",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCyberarm Option. Carbo-glass artificial fingernails that cut on a diagonal slice. A Light Melee Weapon (1d6 damage, 2 ROF) that can be successfully concealed without a Check. When wielded as a weapon, user can't hold anything in this arm's hand. **Can be installed as the only piece of Cyberware in a meat arm.**"
     },
     {
         "name" : "Shoulder Cam",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. Camera in a popup in the user's shoulder that tracks independently of the user and records video and audio to an onboard Memory Chip or a linked Agent. Camera can be successfully concealed without a Check and can be drawn and stowed without an Action. **Requires a Cyberarm and takes 2 Option Slots.**"
     },
     {
         "name" : "Slice 'N Dice",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberarm Option. Monofilament whip implanted in the user's thumb. A Medium Melee Weapon (2d6 damage, 2 ROF) that can be successfully concealed without a Check. When wielded as a weapon, user can't hold anything in this arm's hand. **Can be installed as the only piece of Cyberware in a meat arm.**"
     },
     {
         "name" : "Subdermal Grip",
         "cost" : "100",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberarm Option. Neuralware Option. Subdermal plate under the palm allows user to make use of Smartguns. A cost-effective alternative to Interface Plugs. **Can be installed as the only piece of Cyberware in a meat arm. Requires Neural Link and takes up a Neuralware Option Slot.**"
     },
     {
         "name" : "Techscanner",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. Scanner diagnoses a wide variety of machinery and electronics, assisting the user in repairs or other technical work. User adds +2 to their Basic Tech, Cybertech, Land Vehicle Tech, Sea Vehicle Tech, Air Vehicle Tech, Electronics/ Security Tech, and Weaponstech Skills. **Requires a Cyberarm and takes 2 Option Slots.** Multiple installations of this option provide user no additional benefit."
     },
     {
         "name" : "Tool Hand",
         "cost" : "100",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberarm Option. Fingers contain screwdriver, wrench, small drill, etc. Never be without your Techtool! **Can be installed as the only piece of Cyberware in a meat arm.**"
     },
     {
         "name" : "Wolvers",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. Extendable Carbo-glass claws in the knuckles. A Heavy Melee Weapon (3d6 damage, 2 ROF) that can be successfully concealed without a Check. When wielded as a weapon, user can't hold anything in this arm's hand. **Can be installed as the only piece of Cyberware in a meat arm.**"
     },
     {
         "name" : "Cyberleg",
         "cost" : "100",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Hospital | **HL:** 3 (1d6)\n\nReplacement leg. Does not have to be paired. **A Cyberleg has 3 Option Slots for Cyberleg or Cyberlimb Options** and each comes pre-installed with a Standard Foot that doesn't cost any Humanity Loss or take up a Cyberleg Option Slot. \nMost Cyberleg options must be paired to work properly (purchased twice and installed in two different Cyberlegs on a user. Humanity Loss is calculated separately for each purchase)."
     },
     {
         "name" : "Standard Foot",
         "cost" : "100",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nResembles a normal foot. If installed into a meat leg, a Standard Foot doesn't count towards the number of pieces of cyberware installed in a meat leg. **Doesn't take up a Cyberleg Option Slot.**"
     },
     {
         "name" : "Grip Foot",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberleg Option. Feet are coated with state-of-the-art traction material. The user negates the normal movement penalty for climbing. **Requires two Cyberlegs and must be paired.**"
     },
     {
         "name" : "Jump Booster",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nHydraulics in legs. Negates movement penalty when jumping. \n**Requires two Cyberlegs, takes up 2 Option Slots, and must be paired.**"
     },
     {
         "name" : "Skate Foot",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nInline skates built into feet. Can be concealed. Increases movement by 6m/yds when using Run Action. **Requires two Cyberlegs and must be paired.**"
     },
     {
         "name" : "Talon Foot",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nBlade mounted in foot. Light Melee Weapon. Can be concealed without a Check. **Can be installed as the only piece of Cyberware in a meat leg.**"
     },
     {
         "name" : "Web Foot",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nThin webbing between toes. Negates movement penalty when swimming. **Requires Two Cyberlegs and must be paired.**"
     },
     {
         "name" : "Hardened Shielding",
         "cost" : "1000",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberlimb Option. Cyberlimb and installed options cannot be rendered inoperable by EMP effects, like Microwaver pulses, or Non-Black ICE Program effects. **Requires Cyberarm or Cyberleg.**"
     },
     {
         "name" : "Plastic Covering",
         "cost" : "100",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nCyberlimb Option. Plastic coating for Cyberlimb. Available in wide variety of colors and patterns. **Requires a Cyberarm or Cyberleg but does not take an Option Slot.**"
     },
     {
-        "name" : "Realskinn™ Covering",
+        "name" : "Realskinn Covering",
         "cost" : "500",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nCyberlimb Option. Artificial skin coating for Cyberlimb. \n**Requires a Cyberarm or Cyberleg but does not take an Option Slot.**"
     },
     {
-        "name" : "Superchrome™ Covering",
+        "name" : "Superchrome Covering",
         "cost" : "1000",
         "type" : "Cyberlimbs",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nCyberlimb Option. Shiny metallic coating for Cyberlimb. +2 to Wardrobe and Style. This bonus only applies once. **Requires a Cyberarm or Cyberleg but does not take an Option Slot.**"
     },
     {
         "name" : "Artificial Shoulder Mount",
         "cost" : "1000",
         "type" : "Borgware",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Hospital | **HL:** 14 (4d6)\n\nUser can mount 2 Cyberarms under first set of arms. User can only have one Artificial Shoulder Mount installed."
     },
     {
-        "name" : "Implanted Linear Frame ∑ (Sigma)",
+        "name" : "Implanted Linear Frame (Sigma)",
         "cost" : "1000",
         "type" : "Borgware",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Hospital | **HL:** 14 (4d6)\n\nAn enhanced skeleton and support structure with hydraulic and myomar muscles. \n- User increases their BODY to 12. \n- This increase in BODY changes a Character's HP and Death Save. \n- This cannot increase the user's BODY to 13 or higher. \n- **Installation requires BODY 6 and Grafted Muscle and Bone Lace.**"
     },
     {
-        "name" : "Implanted Linear Frame ß (Beta)",
+        "name" : "Implanted Linear Frame (Beta)",
         "cost" : "5000",
         "type" : "Borgware",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Hospital | **HL:** 14 (4d6)\n\nA heavily enhanced skeleton and support structure with even more hydraulic and myomar muscles. \n- User increases their BODY to 14. \n- This increase in BODY changes a Character's HP and Death Save. \n- This cannot increase the user's BODY to 15 or higher. \n- **Installation requires BODY 8 and Two Grafted Muscle and Bone Lace.**"
     },
     {
         "name" : "MultiOptic Mount",
         "cost" : "1000",
         "type" : "Borgware",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Hospital | **HL:** 14 (4d6)\n\nUser can mount up to 5 additional Cybereyes into the MultiOptic Mount. **Cybereyes sold and installed separately.** User can only have one MultiOptic Mount installed."
     },
     {
-        "name" : "Snsor Array",
+        "name" : "Sensor Array",
         "cost" : "1000",
         "type" : "Borgware",
-        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
+        "desc" : "**Install:** Clinic | **HL:** 14 (4d6)\n\nTwin flattened antennae protruding from the user's head improving their Cyberaudio Suite, sometimes referred to as \"Rabbit Ears.\" User can install up to 5 additional Cyberaudio Options into their Cyberaudio Suite. \nUser can only have one Sensor Array installed. **Requires Cyberaudio Suite but doesn't take up a Cyberaudio Option Slot.**"
     }
     
 ]
