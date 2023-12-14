@@ -59,27 +59,37 @@ app.post('/interactions', async function (req, res) {
     if (name === 'roll') {
       // Send a message into the channel where command was triggered from
       const userId = req.body.member.user.id;
-      var modifier = data.hasOwnProperty("options") ? data["options"][0]["value"] : 0;
-      console.log('modifier is ' + modifier);
-      var roll = getRoll(modifier);
-      console.log('modified roll is ' + roll);
-      var message = `<@${userId}>` + '\n**Roll:** 1d10 (';
+      var modifier = data["options"].hasOwnProperty(1) ? data["options"][1]["value"] : 0;
+      var number = (data["options"][0]["value"] == "d10") ? 1 : modifier;
+      var dietype = data["options"][0]["value"];
 
-      //format output
-      if (roll - modifier >= 10)
+      if (dietype == "d10")
       {
-        message += '**10**) + 1d10 (' + (roll - modifier - 10);
+        console.log('modifier is ' + modifier);
+        var roll = getRoll(10, modifier, true);
+        console.log('modified roll is ' + roll);
+        var message = `<@${userId}>` + '\n**Roll:** 1d10 (';
+
+        //format output
+        if (roll - modifier >= 10)
+        {
+          message += '**10**) + 1d10 (' + (roll - modifier - 10);
+        }
+        else if (roll - modifier <= 0)
+        {
+          message += '1) - 1d10 (' + Math.abs(roll - modifier - 1);
+        }
+        else
+        {
+          message += (roll - modifier);
+        }
+        message += ') + ' + modifier;
+        message += '\n**Result:** ' + roll;
       }
-      else if (roll - modifier <= 0)
+      else //d6 roll
       {
-        message += '1) - 1d10 (' + Math.abs(roll - modifier - 1);
+
       }
-      else
-      {
-        message += (roll - modifier);
-      }
-      message += ') + ' + modifier;
-      message += '\n**Result:** ' + roll;
 
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,

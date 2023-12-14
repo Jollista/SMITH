@@ -1,20 +1,20 @@
 export { getRoll };
 
-function getRoll(modifier)
+function getRoll(max, modifier, explodes=false)
 {
-	var roll = randInt(10);
+	var roll = randInt(max);
 	console.log('Roll is ' + roll);
 
 	//check for crit
-	if (roll == 10)
+	if (explodes && roll == max)
 	{
 		//explode
-		roll += randInt(10);
+		roll += randInt(max);
 	}
-	else if (roll == 1)
+	else if (explodes && roll == 1)
 	{
 		//implode
-		roll -= randInt(10);
+		roll -= randInt(max);
 	}
 
 	return roll + modifier;
