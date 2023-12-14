@@ -95,7 +95,7 @@ app.post('/interactions', async function (req, res) {
         message += `**Roll:** ${modifier}d6 (`
 
         //for each roll to make
-        for (i = 0; i < modifier; i++)
+        for (var i = 0; i < modifier; i++)
         {
           roll = getRoll(6);
           total += roll;
