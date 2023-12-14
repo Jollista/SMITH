@@ -91,11 +91,10 @@ app.post('/interactions', async function (req, res) {
       {
         //number of dice rolled must be at least 1 
         modifier = Math.max(modifier, 1);
-        var roll;
         var total = 0;
         for (i = 0; i < modifier; i++)
         {
-
+          roll = getRoll(6);
         }
       }
 

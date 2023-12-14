@@ -1,6 +1,6 @@
 export { getRoll };
 
-function getRoll(max, modifier, explodes=false)
+function getRoll(max, modifier=0, explodes=false)
 {
 	var roll = randInt(max);
 	console.log('Roll is ' + roll);
