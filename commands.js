@@ -6,12 +6,23 @@ function getCategoryChoices(directory)
 {
   var choices = [];
   var files = fs.readdirSync(directory)
+  
+  //for each file in directory
   for (let file of files) {
     console.log("file name : " + file.split(".")[0]);
-    choices.push({
-      name: capitalize(file.split(".")[0]),
-      value: file,
-    });
+
+    //for each entry in file
+    var json = JSON.parse(fs.readFileSync(directory + file))
+    console.log(json);
+
+    for (let entry of json)
+    {
+      console.log(entry);
+      choices.push({
+        name: capitalize(file.split(".")[0] + ': ' + entry["name"]),
+        value: entry["name"],
+      });
+    }
   }
   return choices;
 }
@@ -43,10 +54,9 @@ const RULE_COMMAND = {
   options: [
     {
       type: 3,
-      name: 'category',
+      name: 'name',
       description: 'The category of rule you want to look up',
       required: true,
-      choices: getCategoryChoices('./datapool/rules/'),
     },
   ],
   type: 1,
@@ -58,10 +68,15 @@ const ITEM_COMMAND = {
   options: [
     {
       type: 3,
-      name: 'type',
+      name: 'category',
       description: 'The type of item you want to look up',
+      required: false,
+    },
+    {
+      type: 3,
+      name: 'name',
+      description: 'The name of the item',
       required: true,
-      choices: getCategoryChoices('./datapool/items/'),
     },
   ],
   type: 1,

@@ -9,6 +9,8 @@ import {
 } from 'discord-interactions';
 import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from './utils.js';
 import { getRoll } from './roll.js';
+import { findEntryInDirectory, findEntryInJSON } from './lookup.js';
+
 
 // Create an express app
 const app = express();
@@ -101,11 +103,22 @@ app.post('/interactions', async function (req, res) {
 
     if (name == 'item')
     {
+      var filepath = './datapool/items/';
+      var entry;
+      if (data["options"].hasOwnProperty(1))
+      {
+        entry = findEntryInJSON(data["options"][0]["value"], filepath + data["options"][1]["value"])
+      }
+      else
+      {
+        entry = findEntryInDirectory(data["options"][0]["value"], filepath)
+      }
+
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           // Fetches a random emoji to send from a helper function
-          content: 'item',
+          content: JSON.stringify(entry),
         },
       });
     }
