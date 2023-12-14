@@ -36,7 +36,13 @@ const ROLL_COMMAND = {
       name: 'modifier',
       description: 'Modifier to a d10 roll, or the number of d6s to roll',
       required: false,
-    }
+    },
+    {
+      type: 3,
+      name: 'label',
+      description: 'Label of the roll',
+      required: false,
+    },
   ],
   type: 1,
 };

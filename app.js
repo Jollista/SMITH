@@ -63,13 +63,15 @@ app.post('/interactions', async function (req, res) {
       var dietype = data["options"][0]["value"];
       var roll;
       var message = `<@${userId}>\n`;
+      var label = data["options"].hasOwnProperty(2) ? data["options"][2]["value"] : "Roll";
+      message += `**${label}:** `;
 
       if (dietype == "d10")
       {
         console.log('modifier is ' + modifier);
         roll = getRoll(10, modifier, true);
         console.log('modified roll is ' + roll);
-        message += '**Roll:** 1d10 (';
+        message += '1d10 (';
 
         //format output
         if (roll - modifier >= 10)
@@ -92,7 +94,7 @@ app.post('/interactions', async function (req, res) {
         //number of dice rolled must be at least 1 
         modifier = Math.max(modifier, 1);
         var total = 0;
-        message += `**Roll:** ${modifier}d6 (`
+        message += `${modifier}d6 (`
 
         //for each roll to make
         for (var i = 0; i < modifier; i++)
