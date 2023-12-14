@@ -8,8 +8,7 @@ import {
   InteractionType,
   verifyKey,
 } from 'discord-interactions';
-import { AWW_COMMAND, INVITE_COMMAND } from './commands.js';
-import { getCuteUrl } from './reddit.js';
+import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND } from './commands.js';
 import { InteractionResponseFlags } from 'discord-interactions';
 
 class JsonResponse extends Response {
@@ -58,26 +57,100 @@ router.post('/', async (request, env) => {
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     // Most user commands will come as `APPLICATION_COMMAND`.
     switch (interaction.data.name.toLowerCase()) {
-      case AWW_COMMAND.name.toLowerCase(): {
-        const cuteUrl = await getCuteUrl();
+      /**
+       * ROLL COMMAND
+       */
+      case ROLL_COMMAND.name.toLowerCase(): {
+        // Send a message into the channel where command was triggered from
+        const userId = req.body.member.user.id;
+        var modifier = data["options"].hasOwnProperty(1) ? data["options"][1]["value"] : 0;
+        var dietype = data["options"][0]["value"];
+        var roll;
+        var message = `<@${userId}>\n`;
+        var label = data["options"].hasOwnProperty(2) ? data["options"][2]["value"] : "Roll";
+        message += `**${label}:** `;
+
+        if (dietype == "d10")
+        {
+          console.log('modifier is ' + modifier);
+          roll = getRoll(10, modifier, true);
+          console.log('modified roll is ' + roll);
+          message += '1d10 (';
+
+          //format output
+          if (roll - modifier >= 10)
+          {
+            message += '**10**) + 1d10 (' + (roll - modifier - 10);
+          }
+          else if (roll - modifier <= 0)
+          {
+            message += '1) - 1d10 (' + Math.abs(roll - modifier - 1);
+          }
+          else
+          {
+            message += (roll - modifier);
+          }
+          message += ') + ' + modifier;
+          message += '\n**Result:** ' + roll;
+        }
+        else //d6 roll
+        {
+          //number of dice rolled must be at least 1 
+          modifier = Math.max(modifier, 1);
+          var total = 0;
+          message += `${modifier}d6 (`
+
+          //for each roll to make
+          for (var i = 0; i < modifier; i++)
+          {
+            roll = getRoll(6);
+            total += roll;
+
+            //bold sixes
+            if (roll == 6)
+              message += '**6**';
+            else
+              message += roll;
+
+            //not last roll
+            if (i+1 != modifier)
+              message  += ', ';
+          }
+          message += ')';
+          message += `\n**Result:** ${total}`;
+        }
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
-            content: cuteUrl,
+            content: message,
           },
         });
       }
-      case INVITE_COMMAND.name.toLowerCase(): {
-        const applicationId = env.DISCORD_APPLICATION_ID;
-        const INVITE_URL = `https://discord.com/oauth2/authorize?client_id=${applicationId}&scope=applications.commands`;
+
+      /**
+       * RULE COMMAND
+       */
+      case RULE_COMMAND.name.toLowerCase(): {
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
-            content: INVITE_URL,
-            flags: InteractionResponseFlags.EPHEMERAL,
+            content: `I'm going insane`,
           },
         });
       }
+
+      /**
+       * ITEM COMMAND
+       */
+      case ITEM_COMMAND.name.toLowerCase(): {
+        return new JsonResponse({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+          data: {
+            content: `I'm going insane`,
+          },
+        });
+      }
+
       default:
         return new JsonResponse({ error: 'Unknown Type' }, { status: 400 });
     }

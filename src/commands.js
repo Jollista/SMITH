@@ -15,7 +15,7 @@ function getCategoryChoices(directory)
     console.log("file name : " + file.split(".")[0]);
 
     choices.push({
-      name: capitalize(file.split(".")[0]),
+      name: file.split(".")[0],
       value: file,
     });
   }
