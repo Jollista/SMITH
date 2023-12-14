@@ -92,10 +92,26 @@ app.post('/interactions', async function (req, res) {
         //number of dice rolled must be at least 1 
         modifier = Math.max(modifier, 1);
         var total = 0;
+        message += `**Roll:** ${modifier}d6 (`
+
+        //for each roll to make
         for (i = 0; i < modifier; i++)
         {
           roll = getRoll(6);
+          total += roll;
+
+          //bold sixes
+          if (roll == 6)
+            message += '**6**';
+          else
+            message += roll;
+
+          //not last roll
+          if (i+1 != modifier)
+            message  += ', ';
         }
+        message += ')';
+        message += `\n**Result:** ${total}`;
       }
 
       return res.send({
