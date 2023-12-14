@@ -112,6 +112,11 @@ app.post('/interactions', async function (req, res) {
       (entry != -1) ? `>>> ## ${entry["name"]}\n${entry["desc"]}\n\n*${entry["cost"]} EB*` 
       : `item:${data["options"][1]["value"]} not found in category:${data["options"][0]["value"]}`;
 
+      if (entry.hasOwnProperty("type"))
+      {
+        message += ` *| ${entry["type"]}*`
+      }
+
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {

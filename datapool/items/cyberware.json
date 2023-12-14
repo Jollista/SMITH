@@ -2,7 +2,8 @@
     {
         "name" : "Biomonitor",
         "cost" : "100",
-        "type" : "Fasionware"
+        "type" : "Fasionware",
+        "desc" : "DESCRIPTION AAAAAAAAAAA"
     },
     {
         "name" : "Chemskin",
