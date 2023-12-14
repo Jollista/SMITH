@@ -25,9 +25,15 @@ const ROLL_COMMAND = {
   description: 'Roll a d10',
   options: [
     {
+      type: 3,
+      name: 'type',
+      description: 'Type of dice to roll',
+      required: true
+    },
+    {
       type: 4,
       name: 'modifier',
-      description: 'Add a modifier to the roll',
+      description: 'Modifier to a d10 roll, or the number of d6s to roll',
       required: false,
     }
   ],
