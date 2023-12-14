@@ -1,39 +1,48 @@
 [
     {
         "name" : "Leathers",
-        "cost" : "20"
+        "cost" : "20",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Kevlar",
-        "cost" : "50"
+        "cost" : "50",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Light Armorjack",
-        "cost" : "100"
+        "cost" : "100",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Bodyweight Suit",
-        "cost" : "1000"
+        "cost" : "1000",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Medium Armorjack",
-        "cost" : "100"
+        "cost" : "100",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Heavy Armorjack",
-        "cost" : "500"
+        "cost" : "500",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Flak",
-        "cost" : "500"
+        "cost" : "500",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Metalgear",
-        "cost" : "5000"
+        "cost" : "5000",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     },
     {
         "name" : "Bulletproof Shield",
-        "cost" : "100"
+        "cost" : "100",
+        "desc" : "**SP:** 4 | **Armor Penalty:** None\n\n"
     }
 ]
         

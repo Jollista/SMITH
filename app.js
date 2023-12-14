@@ -108,11 +108,15 @@ app.post('/interactions', async function (req, res) {
       
       entry = findEntryInJSON(data["options"][1]["value"], filepath + data["options"][0]["value"]);
 
+      var message = 
+      (entry != -1) ? `>>> ## ${entry["name"]}\n${entry["desc"]}\n\n*${entry["cost"]} EB*` 
+      : `item:${data["options"][1]["value"]} not found in category:${data["options"][0]["value"]}`;
+
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           // Fetches a random emoji to send from a helper function
-          content: JSON.stringify(entry),
+          content: message,
         },
       });
     }
