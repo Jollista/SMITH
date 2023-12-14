@@ -60,15 +60,16 @@ app.post('/interactions', async function (req, res) {
       // Send a message into the channel where command was triggered from
       const userId = req.body.member.user.id;
       var modifier = data["options"].hasOwnProperty(1) ? data["options"][1]["value"] : 0;
-      var number = (data["options"][0]["value"] == "d10") ? 1 : modifier;
       var dietype = data["options"][0]["value"];
+      var roll;
+      var message = `<@${userId}>\n`;
 
       if (dietype == "d10")
       {
         console.log('modifier is ' + modifier);
-        var roll = getRoll(10, modifier, true);
+        roll = getRoll(10, modifier, true);
         console.log('modified roll is ' + roll);
-        var message = `<@${userId}>` + '\n**Roll:** 1d10 (';
+        message += '**Roll:** 1d10 (';
 
         //format output
         if (roll - modifier >= 10)
@@ -88,7 +89,14 @@ app.post('/interactions', async function (req, res) {
       }
       else //d6 roll
       {
+        //number of dice rolled must be at least 1 
+        modifier = Math.max(modifier, 1);
+        var roll;
+        var total = 0;
+        for (i = 0; i < modifier; i++)
+        {
 
+        }
       }
 
       return res.send({
