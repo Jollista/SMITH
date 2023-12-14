@@ -47,7 +47,7 @@ const RULE_COMMAND = {
       description: 'The category of rule you want to look up',
       required: true,
       choices: getCategoryChoices('./datapool/rules/'),
-    }
+    },
   ],
   type: 1,
 };
@@ -62,7 +62,7 @@ const ITEM_COMMAND = {
       description: 'The type of item you want to look up',
       required: true,
       choices: getCategoryChoices('./datapool/items/'),
-    }
+    },
   ],
   type: 1,
 };

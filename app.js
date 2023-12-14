@@ -88,13 +88,24 @@ app.post('/interactions', async function (req, res) {
       });
     }
 
+    if (name == 'rule')
+    {
+      return res.send({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+        data: {
+          // Fetches a random emoji to send from a helper function
+          content: 'rule',
+        },
+      });
+    }
+
     if (name == 'item')
     {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           // Fetches a random emoji to send from a helper function
-          content: 'gay',
+          content: 'item',
         },
       });
     }
