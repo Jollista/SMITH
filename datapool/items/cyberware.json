@@ -3,477 +3,577 @@
         "name" : "Biomonitor",
         "cost" : "100",
         "type" : "Fasionware",
-        "desc" : "DESCRIPTION AAAAAAAAAAA"
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nSubdermal implant which generates a constant LED readout of pulse, temperature, respiration, blood sugar, etc. You can link your Biomonitor to your Agent to allow it to track your wellness."
     },
     {
         "name" : "Chemskin",
         "cost" : "100",
-        "type" : "Fashionware"
+        "type" : "Fashionware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nDyes and pigments infused into the skin to permanently change its hue, the applications of which can range from hiding blemishes to the desire for neon-green skin. Pigments can optionally be temperature-sensitive or reactant to hormone changes in the body. A user **with Chemskin and Techhair adds +2 to their Personal Grooming Skill for having both. (This bonus only applies once)**"
     },
     {
         "name" : "EMP Threading",
         "cost" : "10",
-        "type" : "Fashionware"
+        "type" : "Fashionware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nPopularized by the media sensation UR, these thin silver lines run in circuit-like patterns across the body. Many people believe they act as a \"Faraday cage\" to protect you from radiation and EMP effects but so far there’s no scientific backing to these claims. But they sure do look cool. Most people wear EMP Threading as a fashion statement."
     },
     {
         "name" : "Light Tattoo",
         "cost" : "100",
-        "type" : "Fashionware"
+        "type" : "Fashionware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nSubdermal patches store light and project colored tattoos under the skin. The larger the piece, the more installations of this fashionware you need to complete it. **A user with a three or more Light Tattoo installations adds +2 to their Wardrobe & Style Skill. (This bonus only applies once.)**"
     },
     {
         "name" : "Shift Tacts",
         "cost" : "100",
-        "type" : "Fashionware"
+        "type" : "Fashionware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nColor-changing lenses implanted into the eye. Several patterns are also available. Lenses can optionally be temperature-sensitive or reactant to hormone changes in the body. Only one choice of color and pattern can be made, but the user can deactivate the color change at any time desired without an Action."
     },
     {
         "name" : "Skinwatch",
         "cost" : "100",
-        "type" : "Fashionware"
+        "type" : "Fashionware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nSubdermal implant generates a constant LED readout of the current time and date visible through the skin."
     },
     {
         "name" : "Techhair",
         "cost" : "100",
-        "type" : "Fashionware"
+        "type" : "Fashionware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nColor-light-emitting artificial hair. Hair can optionally be temperature sensitive, motorized to extend/retract, or reactant to hormone changes in the body. **A user with Chemskin and Techhair adds +2 to their Personal Grooming Skill for having both. (This bonus only applies once.)**"
     },
     {
         "name" : "Neural Link",
         "cost" : "500",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nWired artificial nervous system, required to use Neuralware, and Subdermal Grips. **System has 5 Option Slots for Neuralware options.**"
     },
     {
         "name" : "Braindance Recorder",
         "cost" : "500",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nNeuralware Option. Share your story from your point of view! Records braindance content to a standard Memory Chip or a linked Agent. Braindances can be viewed using a Braindance Viewer. **Requires Neural Link.**"
     },
     {
         "name" : "Chipware Socket",
         "cost" : "500",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nNeuralware Option. A single socket installed in the back of the neck that allows quick installation of a single piece of Chipware, of which there are many varieties. \nInstalling or uninstalling a single piece of Chipware from a Chipware Socket is an Action. \nThe first time you install a piece of Chipware you've never used before, you always accrue Humanity Loss. Re-installing Chipware you've already used doesn't do this. **Chipware does not take up a Neural Link Option Slot.**\nMultiple sockets may be installed, but each must be paid for individually. **Requires Neural Link.**"
     },
     {
         "name" : "Interface Plugs",
         "cost" : "500",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nNeuralware Option. Plugs in the wrist or head that allow user to jack into and make use of Smartguns, Cyberdecks, heavy machinery, and drive vehicles with no hands! Multiple installations allow user to be plugged into multiple things at the same time. **Requires Neural Link**"
     },
     {
         "name" : "Kerenzikov",
         "cost" : "500",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** Clinic | **HL:** 14 (4d6)\n\nNeuralware Option. Always-on Speedware that provides consistently improved reaction time. \nUser adds +2 to their Initiative Rolls. Only a single piece of Speedware can be installed into a user at a time. **Requires Neural Link.**"
     },
     {
         "name" : "Sandevistan",
         "cost" : "500",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nNeuralware Option. Speedware that provides short boosts of highly improved reaction time. \nWhen activated as an Action, the user adds +3 to any Initiative Roll they make in the next minute, after which Sandevistan cannot be activated again for an hour. Only a single piece of Speedware can be installed into a user at a time. **Requires Neural Link**"
     },
     {
         "name" : "Chemical Analyzer",
         "cost" : "500",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** N/A | **HL:** 3 (1d6)\n\nChipware. While installed into a Chipware Socket, allows user to test substances to find their precise chemical composition as an Action, identifying most substances instantly from a wide database of samples. **Requires Chipware Socket.**"
     },
     {
         "name" : "Memory Chip",
         "cost" : "10",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** N/A | **HL:** 0 (N/A)\n\nChipware. The standard for data storage. While installed into a Chipware socket, the user's cyberware can store data on it or access data stored on it. **Requires Chipware Socket.**"
     },
     {
         "name" : "Olfactory Boost",
         "cost" : "100",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** N/A | **HL:** 7 (2d6)\n\nChipware. While installed into a Chipware Socket, the user's sense of smell is boosted, allowing them to use the Tracking Skill to track scent in addition to visual clues. **Requires Chipware Socket.**"
     },
     {
         "name" : "Pain Editor",
         "cost" : "1000",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** N/A | **HL:** 14 (4d6)\n\nChipware. While installed into a Chipware Socket, a Pain Editor shuts off the user's pain receptors dynamically, allowing them to ignore the effects of the Seriously Wounded Wound State. **Requires Chipware Socket.**"
     },
     {
-        "name" : "Skill Chip (Expensive)",
-        "cost" : "500",
-        "type" : "Neuralware"
-    },
-    {
-        "name" : "Skill Chip (Very Expensive)",
-        "cost" : "1000",
-        "type" : "Neuralware"
+        "name" : "Skill Chip",
+        "cost" : "500 or 1000",
+        "type" : "Neuralware",
+        "desc" : "**Install:** N/A | **HL:** 7 (2d6)\n\nChipware. While installed into a Chipware Socket, a Skill Chip makes the Skill it was made for trained for the user at +3, unless the user's Skill was already trained higher than +3, in which case it does nothing. Skill Chips for (x2) cost Skills are 1,000eb, chips for all other skills are 500eb. **Requires Chipware Socket.**"
     },
     {
         "name" : "Tactile Boost",
         "cost" : "100",
-        "type" : "Neuralware"
+        "type" : "Neuralware",
+        "desc" : "**Install:** N/A | **HL:** 7 (2d6)\n\nChipware. While installed into a Chipware Socket, it boosts the user's sense of touch, allowing them to detect motion within 20m/yds of them, as long as their hand is touching a surface. While in use as a motion detector, that hand can't be used to do anything else. **Requires Chipware Socket.**"
     },
     {
         "name" : "Cybereye",
         "cost" : "100",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nAll following options are installed in an artificial eye that replaces a meat one. Each Cybereye has 3 Option Slots for Cybereye Options.\n Some options must be paired to work properly (purchased twice and installed in two different Cybereyes on a user. Humanity Loss is calculated separately for each purchase)."
     },
     {
         "name" : "Anti-Dazzle",
         "cost" : "100",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCybereye Option. User is immune to blindness or other effects caused by dangerous flashes of light, like those of a flashbang. **Requires two Cybereyes and must be paired.**"
     },
     {
         "name" : "Chyron",
         "cost" : "100",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCybereye Option. Projects a tiny subscreen into user's normal field of vision for messages, video, etc. from a user's other cyberware or electronics. Picture in a picture for real life. **Requires a Cybereye.**"
     },
     {
         "name" : "Color Shift",
         "cost" : "100",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCybereye Option. Cosmetic upgrade allows unlimited color and pattern changes to be made as an Action. Eye can optionally be temperature sensitive or reactant to hormone changes in the body. **Requires a Cybereye.**"
     },
     {
         "name" : "Dartgun",
         "cost" : "500",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nCybereye Option. Dartgun Exotic Weapon, with only a single shot in the clip, concealed inside the Cybereye. **Requires a Cybereye and takes 3 Option Slots.**"
     },
     {
         "name" : "Image Enhance",
         "cost" : "500",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Mall | **HL:** 3 (1d6)\n\nCybereye Option. User adds +2 to their Perception, Lip Reading, and Conceal/Reveal Object Skills for Checks which include sight. **Requires two Cybereyes and must be paired.** Multiple installations of this option provide user no additional benefit."
     },
     {
         "name" : "Low Light/Infrared/UV",
         "cost" : "500",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Mall | **HL:** 3 (1d6)\n\nCybereye Option. Reduces penalties imposed by darkness and other intangible obscurement, like smoke, fog, etc. to 0. User can distinguish hot meat from cold metal but cannot see through anything that could provide cover. **Requires two Cybereyes, must be paired, and takes 2 Option Slots per Cybereye.**"
     },
     {
         "name" : "MicroOptics",
         "cost" : "100",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nCybereye Option. Microscope providing user up to 400x magnification. **Requires a Cybereye.**"
     },
     {
         "name" : "MicroVideo",
         "cost" : "500",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nCybereye Option. Camera in eye records video and audio to a standard Memory Chip or a linked Agent. **Requires a Cybereye and takes 2 Option Slots.**"
     },
     {
         "name" : "Radiation Detector",
         "cost" : "1000",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCybereye Option. Radiation readings within 100m/yds of the user are displayed in user's vision hovering over their source in the form of a blue glow. **Requires a Cybereye.**"
     },
     {
         "name" : "Targeting Scope",
         "cost" : "500",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCybereye Option. User gets a +1 to their Check when making an Aimed Shot. Multiple installations of this option provide user no additional benefit. **Requires a Cybereye.**"
     },
     {
         "name" : "TeleOptics",
         "cost" : "500",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCybereye Option. User can see detail up to 800m/yds away. When attacking a target 51m/yds or further away with either a weapon's single shot firing mode or an Aimed Shot, you can add a +1 to your Check. Multiple installations of this option provide user no additional benefit. Does not stack with Sniping Scope Weapon Attachment. **Requires a Cybereye.**"
     },
     {
         "name" : "Virtuality",
         "cost" : "100",
-        "type" : "Cyberoptics"
+        "type" : "Cyberoptics",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCybereye Option. Projects cyberspace imagery over user's view of the world. Never forget your Virtuality Goggles again. **Requires two Cybereyes and must be paired.**"
     },
     {
         "name" : "Cyberaudio Suite",
         "cost" : "500",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberaudio Suite is installed invisibly in the inner skull. \nSystem has 3 Option Slots for Cyberaudio Options. User can only have one Cyberaudio Suite installed."
     },
     {
         "name" : "Amplified Hearing",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Mall | **HL:** 3 (1d6)\n\nCyberaudio Option. User adds +2 to their Perception Skill for Checks which include hearing. **Requires a Cyberaudio Suite.** Multiple installations of this option provide user no additional benefit."
+    },
+    {
+        "name" : "Audio Recorder",
+        "cost" : "100",
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. Records audio to a standard Memory Chip or a linked Agent. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Bug Detector",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. Beeps when user is within 2m/yds of a tap, bug, or other listening device. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Homing Tracer",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. Can follow a linked tracer up to 1 mile away. Comes with a free button-sized linked tracer. Replacements are 50eb. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Internal Agent",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Mall | **HL:** 3 (1d6)\n\nCyberaudio Option. Fully functional Agent (See Gear Section pg. 352), controlled entirely via voice commands. Images are described, but output can be linked to a Cybereye with Chyron or a nearby screen if visual output is desired. The implanted Agent's Memory Chip cannot be removed without surgery. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Level Damper",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. Automatic noise compensation. User is immune to deafness or other effects caused by dangerously loud noises, like those produced by a flashbang. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Radio Communicator",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. User can communicate via radio, 1-mile range. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Radio Scanner/Music Player",
         "cost" : "50",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. User can use an Action to scan all radio bands within a mile that are currently being used and tune into them. Music player can link to the Data Pool to listen to the hottest music or play directly from a Memory Chip. Understanding scrambled channels requires a Scrambler/Descrambler. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Radar Detector",
         "cost" : "500",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. Beeps if active radar beam is present within 100m/yds. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Scrambler Descrambler",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nCyberaudio Option. Allows user to scramble outgoing communications so they cannot be understood without a descrambler, which is also included at no extra charge. **Requires a Cyberaudio Suite.**"
     },
     {
         "name" : "Voice Stress Analyzer",
         "cost" : "100",
-        "type" : "Cyberaudio"
+        "type" : "Cyberaudio",
+        "desc" : "**Install:** Mall | **HL:** 3 (1d6)\n\nCyberaudio Option. User adds +2 to their Human Perception and Interrogation Skills \nUser can activate a special lie-detecting function for a minute with an Action, during which time the GM rolls all your Character's Human Perception and Interrogation Checks privately, beeping once whenever it detects a lie, or whenever they desire after a failed roll. Beware of false positives and negatives. **Requires a Cyberaudio Suite.** \nMultiple installations of this option provide user no additional benefit."
     },
     {
         "name" : "AudioVox",
         "cost" : "500",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nVocal synthesizer. User adds +2 to their Acting skill and also adds +2 to their Play Instrument Skill while singing. Multiple installations of this option provide user no additional benefit."
     },
     {
         "name" : "Contraceptive Implant",
         "cost" : "10",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\nImplant prevents undesired pregnancy."
     },
     {
         "name" : "Enhanced Antibodies",
         "cost" : "500",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Mall | **HL:** 2 (1d6/2 Round up)\n\nAfter stabilization, the user heals a number of Hit Points equal to twice their BODY for each day they spend resting, doing only light activity, and spending the majority of the day taking it easy until returning to full HP, instead of at their typical rate."
     },
     {
         "name" : "Cybersnake",
         "cost" : "1000",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Hospital | **HL:** 14 (4d6)\n\nHorrifying throat/esophagus-mounted tentacle weapon. \nA Very Heavy Melee Weapon (4d6, 1 ROF) that can be successfully concealed without a Check."
     },
     {
         "name" : "Gills",
         "cost" : "1000",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Hospital | **HL:** 7 (2d6)\n\nUser can breathe underwater."
     },
     {
         "name" : "Grafted Muscle and Bone Lace",
         "cost" : "1000",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Hospital | **HL:** 14 (4d6)\n\nUser increases their BODY by 2. \nThis increase in BODY changes a Character's HP and Death Save. \nThis cannot increase the user's BODY to 11 or higher."
     },
     {
         "name" : "Independent Air Supply",
         "cost" : "1000",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Hospital | **HL:** 2 (1d6/2 Round up)\n\nContains 30 minutes of air, before the user needs to refill the tank from the ambient air, which takes an hour. Alternatively, replacing an empty tank with a full one (50eb), takes an Action."
     },
     {
-        "name" : "Midnight Lady™ Sexual Implant",
+        "name" : "Midnight Lady Sexual Implant",
         "cost" : "100",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nBe a Venus, be the fire. Be desire."
     },
     {
-        "name" : "Mr. Studd™ Sexual Implant",
+        "name" : "Mr. Studd Sexual Implant",
         "cost" : "100",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nAll night, every night. And they'll never know."
     },
     {
         "name" : "Nasal Filters",
         "cost" : "100",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nUser is immune to the effects of toxic gasses, fumes, and all similar dangers that must be inhaled to affect the user. \nUser can deactivate nasal filters, if desired, without an Action."
     },
     {
         "name" : "Radar/Sonar Implant",
         "cost" : "1000",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nConstantly scans terrain within 50m/yds of user, including underwater, for new threats. Scan does not include anything behind cover, like the contents of a room behind a closed door. \nUser receives a beep from the GM along with the direction of its source whenever a new moving object is detected on the scan. \nMultiple installations of this option provide user no additional benefit."
     },
     {
         "name" : "Toxin Binders",
         "cost" : "100",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nUser adds +2 to their Resist Torture/Drugs Skill. \nMultiple installations of this option provide user no additional benefit."
     },
     {
         "name" : "Vampyres",
         "cost" : "500",
-        "type" : "Internal Body Cyberware"
+        "type" : "Internal Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 14 (4d6)\n\nFangs implanted in the user's mouth. \nAn Excellent Quality Light Melee Weapon (1d6 damage, 2 ROF) that can be successfully concealed without a Check. \nA Vial of Poison or Biotoxin (purchased separately, see Gear List on pg. 355) can be safely stored and concealed in a compartment in the roof of the mouth near the fangs without a Check. The contents of the stored vial can then be applied to the Vampyres silently anytime without an Action. Each application uses an entire vial and lasts for 30 minutes. \nInstallation of Vampyres includes a complete rework of the user's mouth which prevents the possibility of poisoning yourself accidentally with your fangs halfway through a slice of pizza or due to a bad Check."
     },
     {
         "name" : "Hidden Holster",
         "cost" : "500",
-        "type" : "External Body Cyberware"
+        "type" : "External Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nHolster inside the user's body can store a weapon already capable of concealment so that it can be successfully concealed without a roll. Weapon can be drawn from the hidden holster without an Action, as long as it is implanted in an easily accessible place on the user's body. You don't want one in your thigh unless you don't wear pants."
     },
     {
         "name" : "Skin Weave",
         "cost" : "500",
-        "type" : "External Body Cyberware"
+        "type" : "External Body Cyberware",
+        "desc" : "**Install:** Hospital | **HL:** 7 (2d6)\n\nUser's body and head are armored at SP7. \nYour SP in any location is determined by your highest source of SP in that location. Additionally, whenever your armor is ablated in a location, all your sources of SP in that location are ablated at the same time. \nWhenever the user successfully completes a day of natural healing, nanomachines present in the Skin Weave repair both the body and head location of the Skin Weave for one point of its lost SP."
     },
     {
         "name" : "Subdermal Armor",
         "cost" : "1000",
-        "type" : "External Body Cyberware"
+        "type" : "External Body Cyberware",
+        "desc" : "**Install:** Hospital | **HL:** 14 (4d6)\n\nUser's body and head are armored at SP11. \nYour SP in any location is determined by your highest source of SP in that location. Additionally, whenever your armor is ablated in a location, all your sources of SP in that location are ablated at the same time. \nWhenever the user successfully completes a day of natural healing, nanomachines present in the Subdermal Armor repair both the body and head location of the Subdermal Armor for one point of its lost SP."
     },
     {
         "name" : "Subdermal Pocket",
         "cost" : "100",
-        "type" : "External Body Cyberware"
+        "type" : "External Body Cyberware",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\n2\"x4\" (5cm x 10cm) space with a Realskinn™ zipper. \nContents can be successfully concealed without a Check."
     },
     {
         "name" : "Cyberarm",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Hospital | **HL:** 7 (2d6)\n\nReplacement arm. Does not have to be paired. **A Cyberarm has 4 Option Slots for Cyberarm or Cyberlimb Options**, and each comes pre-installed with a Standard Hand that doesn't cost any Humanity Loss or take up a Cyberarm Option Slot"
     },
     {
         "name" : "Standard Hand",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 2 (1d6/2 Round up)\n\nResembles a normal hand. If installed into a meat arm, a standard hand doesn't count towards the number of pieces of cyberware installed in a meat arm. **Doesn't take up a Cyberarm Option Slot.**"
     },
     {
         "name" : "Big Knucks",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberarm Option. Armored knuckles. A Medium Melee Weapon (2d6 damage, 2 ROF) that can be successfully concealed without a Check. When wielded as a weapon, user can't hold anything in this arm's hand. **Can be installed as the only piece of Cyberware in a meat arm.**"
     },
     {
         "name" : "Cyberdeck",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberarm Option. Cyberdeck permanently installed into the user's Cyberarm. A Cyberdeck must be provided by the user at the time of installation. In addition to never accidentally misplacing your Cyberdeck, integration into a Cyberarm gives any Cyberdeck 1 extra slot that can be used for either Programs or Hardware. This is a permanent upgrade. Attempting to uninstall the Cyberdeck from the Cyberarm breaks it beyond repair, but any Programs or Hardware on it could be easily recovered. **Requires a Cyberarm and takes 3 Option Slots.** \nCyberdeck still requires Interface Plugs and Neural Link to be operated by the user."
     },
     {
         "name" : "Grapple Hand",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberarm Option. User, as an Action, can fire a rocket propelled grapple that will attach securely to any Thick cover up to 30m/yds away. Line can only support two times the user's body weight, and has 10 HP. \nThe user negates the normal movement penalty for climbing when they climb this line, and can retract the line without an Action, including as they climb. When used as a grapple, user can't hold anything in this arm's hand. Ineffective as a weapon and cannot be used to make the Grab Action. **Requires a Cyberarm.**"
+    },
+    {
+        "name" : "Medscanner",
+        "cost" : "500",
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. Scanner with external probes and contacts diagnoses injury and illness, assisting user in medical emergencies not requiring the Surgery Skill. User adds +2 to their First Aid and Paramedic Skills. **Requires a Cyberarm and takes 2 Option Slots.** \nMultiple installations of this option provide user no additional benefit."
     },
     {
         "name" : "Popup Grenade Launcher",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. A One-Handed Grenade Launcher with only a single grenade in its magazine that is incompatible with all Weapon Attachments except Smartgun Link is installed into the Cyberarm. Launcher can be successfully concealed without a Check and can be drawn and stowed without an Action. While the weapon is \"popped up,\" the user can't hold anything in this arm's hand. **Requires a Cyberarm and takes 2 Option Slots.**"
     },
     {
         "name" : "Popup Melee Weapon",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option A One-Handed Light, Medium, or Heavy Melee Weapon (that need not be concealable before its installation) is installed in a Cyberarm so that it can be successfully concealed without a roll, and can be drawn and stowed without an Action. While the weapon is \"popped up,\" the user can't hold anything in this arm's hand. **Requires a Cyberarm and takes 2 Option Slots.**"
     },
     {
         "name" : "Popup Shield",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. A Bulletproof Shield which is concealed while it is folded inside the Cyberarm. It can be drawn or stowed without an Action, provided that the shield has more than 0 HP. When extended, you can't use the Cyberarm to do anything else other than serve as a shield, and you can't hold anything in that Cyberarm's hand other than the shield. The Bulletproof Shield installed inside your Cyberarm is easily removable and replaceable with another Bulletproof Shield, for ease of cleaning and repair. **Requires a Cyberarm and takes 3 Option Slots.** See Using Shields in the Combat Section on pg. 183."
     },
     {
         "name" : "Popup Ranged Weapon",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. A One-Handed Ranged Weapon (that need not be concealable before its installation) provided by the user is permanently installed into the Cyberarm (along with any weapon attachments attached to it) so that it can be successfully concealed without a Check, and can be drawn and stowed without an Action. While the weapon is \"popped up,\" the user can't hold anything in this arm's hand. **Requires a Cyberarm and takes 2 Option Slots.**"
     },
     {
         "name" : "Quick Change Mount",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 7 (2d6)\n\nCyberarm Option. Cyberarm can be installed in an open socket or uninstalled with an Action. The first time you install a brand new Cyberarm, whether using a Quick Change Mount or otherwise, you always accrue Humanity Loss. Reattaching one you've already used before with a Quick Change Mount does not do this. **Requires a Cyberarm.**"
     },
     {
         "name" : "Rippers",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Clinic | **HL:** 3 (1d6)\n\nCyberarm Option. Extendable Carbo-glass fingernails. A Medium Melee Weapon (2d6 damage, 2 ROF) that can be successfully concealed without a Check. When wielded as a weapon, user can't hold anything in this arm's hand. **Can be installed as the only piece of Cyberware in a meat arm.**"
     },
     {
         "name" : "Scratchers",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Shoulder Cam",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Slice 'N Dice",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Subdermal Grip",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Techscanner",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Tool Hand",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Wolvers",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Cyberleg",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Standard Foot",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Grip Foot",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Jump Booster",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Skate Foot",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Talon Foot",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Web Foot",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Hardened Shielding",
         "cost" : "1000",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Plastic Covering",
         "cost" : "100",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Realskinn™ Covering",
         "cost" : "500",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Superchrome™ Covering",
         "cost" : "1000",
-        "type" : "Cyberlimbs"
+        "type" : "Cyberlimbs",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Artificial Shoulder Mount",
         "cost" : "1000",
-        "type" : "Borgware"
+        "type" : "Borgware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Implanted Linear Frame ∑ (Sigma)",
         "cost" : "1000",
-        "type" : "Borgware"
+        "type" : "Borgware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Implanted Linear Frame ß (Beta)",
         "cost" : "5000",
-        "type" : "Borgware"
+        "type" : "Borgware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "MultiOptic Mount",
         "cost" : "1000",
-        "type" : "Borgware"
+        "type" : "Borgware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     },
     {
         "name" : "Snsor Array",
         "cost" : "1000",
-        "type" : "Borgware"
+        "type" : "Borgware",
+        "desc" : "**Install:** Mall | **HL:** 0 (N/A)\n\n"
     }
     
 ]
