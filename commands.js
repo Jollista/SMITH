@@ -38,7 +38,7 @@ const ROLL_COMMAND = {
 };
 
 const RULE_COMMAND = {
-  name: 'lookup rule',
+  name: 'rule',
   description: 'Look up a rule',
   options: [
     {
@@ -53,7 +53,7 @@ const RULE_COMMAND = {
 };
 
 const ITEM_COMMAND = {
-  name: 'lookup item',
+  name: 'item',
   description: 'Look up an item',
   options: [
     {
