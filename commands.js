@@ -28,7 +28,8 @@ const ROLL_COMMAND = {
       type: 3,
       name: 'type',
       description: 'Type of dice to roll',
-      required: true
+      required: true,
+      choices: [{name:"d10", value:"d10"}, {name:"d6", value:"d6"}]
     },
     {
       type: 4,
