@@ -4,7 +4,7 @@ DATA.POOL is a discord bot for Cyberpunk RED.
 
 ## How to use
 
-Simply [invite] (https://discord.com/api/oauth2/authorize?client_id=1179341761991159908&permissions=2147485696&scope=bot)
+Simply [invite](https://discord.com/api/oauth2/authorize?client_id=1179341761991159908&permissions=2147485696&scope=bot)
 it to one of your servers, authorize it, and have fun. Or don't. I'm not your mom.
 
 ## Features
@@ -36,11 +36,10 @@ This is a fan project. Cyberpunk, Cyberpunk RED and all related copyrights and t
 >! Don't sue me
 
 ## Resources
-<ul>
-	<li>[Discord Interactions API](https://discord.com/developers/docs/interactions/receiving-and-responding)</li>
-	<li>[Cloudflare workers](https://workers.cloudflare.com) for hosting</li>
-	<li>[Supabase](https://supabase.com) for database</li>
-	<li>First version of nightmarket data thanks to [renegadejade](https://github.com/renegadejade/glitch).</li>
-	<li>Discord API tutorial [Getting Started](https://github.com/discord/discord-example-apphttps://github.com/discord/discord-example-app)</li>
-	<li>[Cloudflare worker example](https://github.com/discord/cloudflare-sample-app)</li>
-</ul>
+
+- [Discord Interactions API](https://discord.com/developers/docs/interactions/receiving-and-responding)
+- [Cloudflare workers](https://workers.cloudflare.com) for hosting
+- [Supabase](https://supabase.com/) for database
+- First version of nightmarket data thanks to [renegadejade](https://github.com/renegadejade/glitch).
+- Discord API tutorial [Getting Started](https://github.com/discord/discord-example-apphttps://github.com/discord/discord-example-app)
+- [Cloudflare worker example](https://github.com/discord/cloudflare-sample-app)
