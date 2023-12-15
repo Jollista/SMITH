@@ -166,7 +166,7 @@ router.post('/', async (request, env) => {
           message =
             entry != -1
               ? `>>> ## ${entry['name']}\n${entry['desc']}\n\n*${entry['cost']} EB*`
-              : `item:${interaction['data']['options'][1]['value']} not found in category:${interaction['data']['options'][0]['value']}`;
+              : `>>>Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['name']}**\n\nHint: Maybe in a different category or spelled different.`;
 
           if (Object.prototype.hasOwnProperty.call(entry, 'type')) {
             message += ` *| ${entry['type']}*`;
