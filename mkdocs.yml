@@ -1,0 +1,18 @@
+site_name: DATA.POOL
+
+theme:
+  name: material
+  logo: img/logo.png
+  favicon: img/favicon.ico
+  features:
+    - header.autohide
+  palette:
+    scheme: slate
+    primary: red
+    accent: red
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
