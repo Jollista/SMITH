@@ -136,7 +136,7 @@ router.post('/', async (request, env) => {
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
-            content: `I'm going insane`,
+            content: `I'm gonna be real, <@${interaction["member"]["user"]["id"]}>,\nThere's a lotta rules and I ain't got the data yet. I might add this later. Who knows.`,
           },
         });
       }
