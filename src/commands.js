@@ -3,30 +3,32 @@
  * and registration.
  */
 
-import { createClient } from '@supabase/supabase-js';
-const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
-
-
-async function getCategoryChoices(directory) 
+function getCategoryChoices() 
 {
   var choices = [];
-  const { data, error } = await supabase
-    .from('items')
-    .select()
+  var table = [
+    "ammunition.json",
+    "armor.json",
+    "cyberdeckhardware.json",
+    "cyberware.json",
+    "exoticweapons.json",
+    "gear.json",
+    "meleeweapons.json",
+    "programs.json",
+    "rangedweapons.json",
+    "streetdrugs.json",
+    "weaponattachments.json"
+  ];
   
-  console.log("data : " + data);
-  
-  console.log(JSON.stringify(files));
-  
-  //for each file in directory
-  for (let file of files) {
-    console.log("file name : " + file["type"]);
-
+  //for each table in database
+  for (let row of table) {
+    console.log(row);
     choices.push({
-      name: file["type"],
-      value: file["type"],
+      name: row,
+      value: row,
     });
   }
+  console.log(choices.toString());
   return choices;
 }
 
@@ -81,7 +83,7 @@ export const ITEM_COMMAND = {
       name: 'category',
       description: 'The type of item you want to look up',
       required: true,
-      choices: getCategoryChoices('./src/datapool/items'),
+      choices: getCategoryChoices(),
     },
     {
       type: 3,
