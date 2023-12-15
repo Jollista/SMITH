@@ -7,25 +7,32 @@ function getCategoryChoices()
 {
   var choices = [];
   var table = [
-    "ammunition.json",
-    "armor.json",
-    "cyberdeckhardware.json",
-    "cyberware.json",
-    "exoticweapons.json",
-    "gear.json",
-    "meleeweapons.json",
-    "programs.json",
-    "rangedweapons.json",
-    "streetdrugs.json",
-    "weaponattachments.json"
+    "Ammunition",
+    "Armor",
+    "Cyberdeck Hardware",
+    "Cyberware",
+    "Exotic Weapons",
+    "Gear",
+    "Melee Weapons",
+    "Programs",
+    "Ranged Weapons",
+    "Street Drugs",
+    "Weapon Attachments"
   ];
   
   //for each table in database
   for (let row of table) {
+    //value is name of row in database
+    var value = row.replace(" ", "") + ".json";
+    value = value.toLowerCase();
+
+    //debug output
     console.log(row);
+    console.log(value);
+
     choices.push({
       name: row,
-      value: row,
+      value: value,
     });
   }
   console.log(choices.toString());
