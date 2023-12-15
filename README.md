@@ -28,7 +28,7 @@ What else could you possibly need?
 - `category` - required; category of the item you want to pull up
 - `name` - required; name of the item within the specified category
 
-![items](img/datapool-rolls.gif)
+![items](img/datapool-items.gif)
 
 ### Rule
 
