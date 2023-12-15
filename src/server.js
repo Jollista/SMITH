@@ -162,7 +162,16 @@ router.post('/', async (request, env) => {
         if (error != null)
           message = `Error retrieving data`;
         else
-          message = JSON.stringify(entry);
+        {
+          message = 
+          (entry != -1) ? `>>> ## ${entry["name"]}\n${entry["desc"]}\n\n*${entry["cost"]} EB*` 
+          : `item:${data["options"][1]["value"]} not found in category:${data["options"][0]["value"]}`;
+
+          if (entry.hasOwnProperty("type"))
+          {
+            message += ` *| ${entry["type"]}*`
+          }
+        }
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
