@@ -4,7 +4,7 @@ DATA.POOL is a discord bot for Cyberpunk RED.
 
 ## How to use
 
-Simply [invite](https://discord.com/api/oauth2/authorize?client_id=1179341761991159908&permissions=2147485696&scope=bot)
+Simply [invite] (https://discord.com/api/oauth2/authorize?client_id=1179341761991159908&permissions=2147485696&scope=bot)
 it to one of your servers, authorize it, and have fun. Or don't. I'm not your mom.
 
 ## Features
