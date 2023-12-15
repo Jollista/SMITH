@@ -3,27 +3,26 @@
  * and registration.
  */
 
-function getCategoryChoices() 
-{
+function getCategoryChoices() {
   var choices = [];
   var table = [
-    "Ammunition",
-    "Armor",
-    "Cyberdeck Hardware",
-    "Cyberware",
-    "Exotic Weapons",
-    "Gear",
-    "Melee Weapons",
-    "Programs",
-    "Ranged Weapons",
-    "Street Drugs",
-    "Weapon Attachments"
+    'Ammunition',
+    'Armor',
+    'Cyberdeck Hardware',
+    'Cyberware',
+    'Exotic Weapons',
+    'Gear',
+    'Melee Weapons',
+    'Programs',
+    'Ranged Weapons',
+    'Street Drugs',
+    'Weapon Attachments',
   ];
-  
+
   //for each table in database
   for (let row of table) {
     //value is name of row in database
-    var value = row.replace(" ", "") + ".json";
+    var value = row.replace(' ', '') + '.json';
     value = value.toLowerCase();
 
     //debug output
@@ -49,7 +48,10 @@ export const ROLL_COMMAND = {
       name: 'type',
       description: 'Type of dice to roll',
       required: true,
-      choices: [{name:"d10", value:"d10"}, {name:"d6", value:"d6"}]
+      choices: [
+        { name: 'd10', value: 'd10' },
+        { name: 'd6', value: 'd6' },
+      ],
     },
     {
       type: 4,

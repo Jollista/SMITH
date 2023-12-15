@@ -1,7 +1,7 @@
 {
-  "name": "awwbot",
+  "name": "datapool",
   "version": "1.0.0",
-  "description": "A simple discord bot that uses intents to post pictures from r/aww",
+  "description": "A dice bot (and more) for Cyberpunk RED",
   "type": "module",
   "private": true,
   "main": "src/server.js",
@@ -10,13 +10,13 @@
     "dev": "wrangler dev src/server.js",
     "ngrok": "ngrok http 8787",
     "test": "c8 mocha test",
-    "fix": "eslint --fix '**/*.js'",
-    "lint": "eslint '**/*.js'",
+    "fix": "eslint --fix \"**/*.js\"",
+    "lint": "eslint \"**/*.js\"",
     "register": "node src/register.js",
     "publish": "wrangler deploy"
   },
   "keywords": [],
-  "author": "Justin Beckwith <justin.beckwith@gmail.com>",
+  "author": "Jollista <https://jollista.github.io/me/>",
   "license": "MIT",
   "dependencies": {
     "discord-interactions": "^3.4.0",

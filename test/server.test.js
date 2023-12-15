@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { describe, it, beforeEach, afterEach } from 'mocha';
+import { describe, it } from 'mocha';
 import server from '../src/server.js';
 
 describe('Server', () => {
