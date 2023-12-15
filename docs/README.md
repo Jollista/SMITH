@@ -20,6 +20,8 @@ What else could you possibly need?
 
 ### Roll
 
+![rolls](img/datapool-rolls.gif)
+
 > /roll {type} {modifier} {label}
 
 - `type` - required; type of die to roll, either d10 or d6
@@ -27,6 +29,8 @@ What else could you possibly need?
 - `label` - optional; message output before roll in bold. Default "Roll"
 
 ### Item
+
+![rolls](img/datapool-items.gif)
 
 > /item {category} {name}
 
