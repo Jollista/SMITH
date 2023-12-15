@@ -166,7 +166,7 @@ router.post('/', async (request, env) => {
           message =
             entry != -1
               ? `>>> ## ${entry['name']}\n${entry['desc']}\n\n*${entry['cost']} EB*`
-              : `item:${data['options'][1]['value']} not found in category:${data['options'][0]['value']}`;
+              : `item:${interaction['data']['options'][1]['value']} not found in category:${interaction['data']['options'][0]['value']}`;
 
           if (Object.prototype.hasOwnProperty.call(entry, 'type')) {
             message += ` *| ${entry['type']}*`;
