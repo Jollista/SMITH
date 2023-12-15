@@ -44,6 +44,8 @@ This is a fan project. Cyberpunk, Cyberpunk RED and all related copyrights and t
 
 ## Resources
 
+GitHub repository [here](https://github.com/Jollista/DATA.POOL).
+
 - [Discord Interactions API](https://discord.com/developers/docs/interactions/receiving-and-responding)
 - [Cloudflare workers](https://workers.cloudflare.com) for hosting
 - [Supabase](https://supabase.com/) for database
