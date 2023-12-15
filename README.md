@@ -13,20 +13,20 @@ It rolls dice, it looks up items, and pulls up rules* for you.
 What else could you possibly need?
 > ! rule command currently non-functional. I'm just one person and it's a lot of rules.
 
-### /roll
+### Roll
 
 > /roll {type} {modifier} {label}
 - `type` - required; type of die to roll, either d10 or d6
 - `modifier` - optional; bonus to be added to a d10 roll, or the number of d6s to roll. Default 0 for d10, default 1 for d6
 - `label` - optional; message output before roll in bold. Default "Roll"
 
-### /item
+### Item
 
 > /item {category} {name}
 - `category` - required; category of the item you want to pull up
 - `name` - required; name of the item within the specified category
 
-### /rule
+### Rule
 
 Currently lacks data required to work. I might fix this eventually. If it is fixed, it will function similar to item.
 
