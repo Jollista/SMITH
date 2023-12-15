@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 # DATA.POOL
 
 DATA.POOL is a discord bot for Cyberpunk RED.

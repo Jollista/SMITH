@@ -11,6 +11,10 @@ theme:
     primary: red
     accent: red
 
+nav:
+  - Home: README.md
+  - Privacy: privacy.md
+
 extra_css:
   - stylesheets/extra.css
 
