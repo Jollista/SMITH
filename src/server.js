@@ -10,6 +10,7 @@ import {
 } from 'discord-interactions';
 import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND } from './commands.js';
 import { InteractionResponseFlags } from 'discord-interactions';
+import { getRoll } from './roll.js';
 
 class JsonResponse extends Response {
   constructor(body, init) {
@@ -62,12 +63,12 @@ router.post('/', async (request, env) => {
        */
       case ROLL_COMMAND.name.toLowerCase(): {
         // Send a message into the channel where command was triggered from
-        const userId = req.body.member.user.id;
-        var modifier = data["options"].hasOwnProperty(1) ? data["options"][1]["value"] : 0;
-        var dietype = data["options"][0]["value"];
+        const userId = interaction["member"]["user"]["id"];
+        var modifier = (interaction.data["options"].hasOwnProperty(1) && interaction.data["options"][1]["name"] == "modifier") ? interaction.data["options"][1]["value"] : 0;
+        var dietype = interaction.data["options"][0]["value"];
         var roll;
         var message = `<@${userId}>\n`;
-        var label = data["options"].hasOwnProperty(2) ? data["options"][2]["value"] : "Roll";
+        var label = interaction.data["options"].hasOwnProperty(2) ? interaction.data["options"][2]["value"] : "Roll";
         message += `**${label}:** `;
 
         if (dietype == "d10")
@@ -119,6 +120,7 @@ router.post('/', async (request, env) => {
           message += ')';
           message += `\n**Result:** ${total}`;
         }
+
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {

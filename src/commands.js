@@ -3,20 +3,28 @@
  * and registration.
  */
 
-import * as fs from 'fs';
+import { createClient } from '@supabase/supabase-js';
+const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
 
-function getCategoryChoices(directory) 
+
+async function getCategoryChoices(directory) 
 {
   var choices = [];
-  var files = fs.readdirSync(directory)
+  const { data, error } = await supabase
+    .from('items')
+    .select()
+  
+  console.log("data : " + data);
+  
+  console.log(JSON.stringify(files));
   
   //for each file in directory
   for (let file of files) {
-    console.log("file name : " + file.split(".")[0]);
+    console.log("file name : " + file["type"]);
 
     choices.push({
-      name: file.split(".")[0],
-      value: file,
+      name: file["type"],
+      value: file["type"],
     });
   }
   return choices;
