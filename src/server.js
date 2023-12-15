@@ -11,6 +11,8 @@ import {
 import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND } from './commands.js';
 import { InteractionResponseFlags } from 'discord-interactions';
 import { getRoll } from './roll.js';
+import { findEntryInJSON } from './lookup.js';
+import { createClient } from '@supabase/supabase-js'
 
 class JsonResponse extends Response {
   constructor(body, init) {
@@ -46,6 +48,9 @@ router.post('/', async (request, env) => {
   if (!isValid || !interaction) {
     return new Response('Bad request signature.', { status: 401 });
   }
+
+  // Create a single supabase client for interacting with your database
+  const supabase = createClient(env.SUPABASE_URL, env.SUPABASE_KEY);
 
   if (interaction.type === InteractionType.PING) {
     // The `PING` message is used during the initial webhook handshake, and is
@@ -145,10 +150,23 @@ router.post('/', async (request, env) => {
        * ITEM COMMAND
        */
       case ITEM_COMMAND.name.toLowerCase(): {
+        var category = interaction["data"]["options"][0]["value"];
+        const { data, error } = await supabase
+          .from('items')
+          .select()
+          .eq('type', category)
+        
+        //retrieve item entry from data
+        const entry = findEntryInJSON(interaction["data"]["options"][1]["value"], data[0]["contents"]);
+        var message;
+        if (error != null)
+          message = `Error retrieving data`;
+        else
+          message = JSON.stringify(entry);
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
-            content: `category : ${interaction["data"]["options"][0]["value"]}\nitem : ${interaction["data"]["options"][1]["value"]}`,
+            content: message,
           },
         });
       }
