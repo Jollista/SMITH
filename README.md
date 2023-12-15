@@ -15,20 +15,20 @@ What else could you possibly need?
 
 ### Roll
 
-![rolls](img/datapool-rolls.gif)
-
 > /roll {type} {modifier} {label}
 - `type` - required; type of die to roll, either d10 or d6
 - `modifier` - optional; bonus to be added to a d10 roll, or the number of d6s to roll. Default 0 for d10, default 1 for d6
 - `label` - optional; message output before roll in bold. Default "Roll"
 
-### Item
-
 ![rolls](img/datapool-rolls.gif)
+
+### Item
 
 > /item {category} {name}
 - `category` - required; category of the item you want to pull up
 - `name` - required; name of the item within the specified category
+
+![items](img/datapool-rolls.gif)
 
 ### Rule
 
