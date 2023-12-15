@@ -1,6 +1,6 @@
 # DATA.POOL
 
-DATA.POOL is a discord bot for Cyberpunk RED. 
+DATA.POOL is a discord bot for Cyberpunk RED. Better documentation [here](https://jollista.github.io/DATA.POOL/)
 
 ## How to use
 
