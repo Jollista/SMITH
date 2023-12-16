@@ -99,6 +99,7 @@ export const ITEM_COMMAND = {
       name: 'name',
       description: 'The name of the item',
       required: true,
+      autocomplete: true,
     },
   ],
   type: 1,

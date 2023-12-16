@@ -150,6 +150,7 @@ router.post('/', async (request, env) => {
        * ITEM COMMAND
        */
       case ITEM_COMMAND.name.toLowerCase(): {
+        //query database for category
         var category = interaction['data']['options'][0]['value'];
         const { data, error } = await supabase
           .from('items')
@@ -166,7 +167,7 @@ router.post('/', async (request, env) => {
           message =
             entry != -1
               ? `>>> ## ${entry['name']}\n${entry['desc']}\n\n*${entry['cost']} EB*`
-              : `>>>Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['name']}**\n\nHint: Maybe in a different category or spelled different.`;
+              : `>>>Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['value']}**\n\nHint: Maybe in a different category or spelled different.`;
 
           if (Object.prototype.hasOwnProperty.call(entry, 'type')) {
             message += ` *| ${entry['type']}*`;
@@ -183,6 +184,22 @@ router.post('/', async (request, env) => {
       default:
         return new JsonResponse({ error: 'Unknown Type' }, { status: 400 });
     }
+  }
+
+  const autochoices = [
+    {name:'woah', value:'choice1'},
+    {name:'crazy', value:'choice2'},
+  ];
+
+  if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) 
+  {
+    console.log(`autocomplete for : ${interaction["data"]["options"][1]["value"]}`);
+    return new JsonResponse({
+      type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE,
+      data:{
+        choices: autochoices,
+      }
+    })
   }
 
   console.error('Unknown Type');
