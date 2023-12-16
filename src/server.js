@@ -187,15 +187,15 @@ router.post('/', async (request, env) => {
   }
 
   const autochoices = [
-    {name:'woah', value:'choice1'},
-    {name:'crazy', value:'choice2'},
+    {'name':'woah', 'value':'choice1'},
+    {'name':'crazy', 'value':'choice2'},
   ];
 
   if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) 
   {
     console.log(`autocomplete for : ${interaction["data"]["options"][1]["value"]}`);
     return new JsonResponse({
-      type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE,
+      type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE_RESULT,
       data:{
         choices: autochoices,
       }
