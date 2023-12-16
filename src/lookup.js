@@ -31,7 +31,8 @@ export function autocomplete(partialString, json) {
   for (let item of json) {
     if (
       choices.length < 25 &&
-      item['name'].toUpperCase().includes(partialString.toUpperCase())
+      (item['name'].toUpperCase().includes(partialString.toUpperCase()) || 
+      charactersIn(partialString.toUpperCase(), item['name'].toUpperCase()))
     ) {
       choices.push({
         name: item['name'],
@@ -41,4 +42,24 @@ export function autocomplete(partialString, json) {
   }
 
   return choices;
+}
+
+/**
+ * Goes through a list of characters
+ * 
+ * @param {String} characters list of characters
+ * @param {String} string string to check characters against
+ * @returns true if all characters in characters are included in the string; else, false
+ */
+export function charactersIn(characters, string) 
+{
+  for (let i = 0; i < string.length; i++)
+  {
+    if (!string.includes(characters.charAt(i)))
+    {
+      return false;
+    }
+  }
+
+  return true;
 }
