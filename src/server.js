@@ -186,26 +186,30 @@ router.post('/', async (request, env) => {
     }
   }
 
-  if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) 
-  {
-    console.log(`autocomplete for : ${interaction["data"]["options"][1]["value"]}`);
+  if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) {
+    console.log(
+      `autocomplete for : ${interaction['data']['options'][1]['value']}`,
+    );
 
     //get relevant json from supabase
     const { data, error } = await supabase
-          .from('items')
-          .select()
-          .eq('type', interaction["data"]["options"][0]["value"]);
-    
-    
-    var choices = autocomplete(interaction["data"]["options"][1]["value"], data[0]["contents"]);
+      .from('items')
+      .select()
+      .eq('type', interaction['data']['options'][0]['value']);
+
+    var choices = autocomplete(
+      interaction['data']['options'][1]['value'],
+      data[0]['contents'],
+    );
+    console.log('this is just to appease lint ' + error);
     console.log(choices);
 
     return new JsonResponse({
       type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE_RESULT,
-      data:{
+      data: {
         choices: choices,
-      }
-    })
+      },
+    });
   }
 
   console.error('Unknown Type');
