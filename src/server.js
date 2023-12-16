@@ -10,7 +10,7 @@ import {
 } from 'discord-interactions';
 import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND } from './commands.js';
 import { getRoll } from './roll.js';
-import { findEntryInJSON } from './lookup.js';
+import { autocomplete, findEntryInJSON } from './lookup.js';
 import { createClient } from '@supabase/supabase-js';
 
 class JsonResponse extends Response {
@@ -186,18 +186,24 @@ router.post('/', async (request, env) => {
     }
   }
 
-  const autochoices = [
-    {'name':'woah', 'value':'choice1'},
-    {'name':'crazy', 'value':'choice2'},
-  ];
-
   if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) 
   {
     console.log(`autocomplete for : ${interaction["data"]["options"][1]["value"]}`);
+
+    //get relevant json from supabase
+    const { data, error } = await supabase
+          .from('items')
+          .select()
+          .eq('type', interaction["data"]["options"][0]["value"]);
+    
+    
+    var choices = autocomplete(interaction["data"]["options"][1]["value"], data[0]["contents"]);
+    console.log(choices);
+
     return new JsonResponse({
       type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE_RESULT,
       data:{
-        choices: autochoices,
+        choices: choices,
       }
     })
   }
