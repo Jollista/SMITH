@@ -29,11 +29,8 @@ export function autocomplete(partialString, json) {
   console.log(`partialString is "${partialString}"`);
 
   for (let item of json) {
-    if (
-      choices.length < 25 &&
-      (item['name'].toUpperCase().includes(partialString.toUpperCase()) || 
-      charactersIn(partialString.toUpperCase(), item['name'].toUpperCase()))
-    ) {
+    if (choices.length < 25 && (item['name'].toUpperCase().includes(partialString.toUpperCase()) || charactersIn(partialString.toUpperCase(), item['name'].toUpperCase())) ) 
+    {
       choices.push({
         name: item['name'],
         value: item['name'],
@@ -53,7 +50,7 @@ export function autocomplete(partialString, json) {
  */
 export function charactersIn(characters, string) 
 {
-  for (let i = 0; i < string.length; i++)
+  for (let i = 0; i < characters.length; i++)
   {
     if (!string.includes(characters.charAt(i)))
     {
