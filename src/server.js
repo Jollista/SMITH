@@ -68,23 +68,13 @@ router.post('/', async (request, env) => {
        */
       case ROLL_COMMAND.name.toLowerCase(): {
         // Send a message into the channel where command was triggered from
-        const userId = interaction['member']['user']['id'];
-        var modifier =
-          Object.prototype.hasOwnProperty.call(
-            interaction.data['options'],
-            1,
-          ) && interaction.data['options'][1]['name'] == 'modifier'
-            ? interaction.data['options'][1]['value']
-            : 0;
+        console.log(JSON.stringify(interaction));
+        const userId = interaction['user']['id'];
+        var modifier = Object.prototype.hasOwnProperty.call(interaction.data['options'], 1,) && interaction.data['options'][1]['name'] == 'modifier' ? interaction.data['options'][1]['value'] : 0;
         var dietype = interaction.data['options'][0]['value'];
         var roll;
         message = `<@${userId}>\n`;
-        var label = Object.prototype.hasOwnProperty.call(
-          interaction.data['options'],
-          2,
-        )
-          ? interaction.data['options'][2]['value']
-          : 'Roll';
+        var label = Object.prototype.hasOwnProperty.call(interaction.data['options'], 2,) ? interaction.data['options'][2]['value'] : 'Roll';
         message += `**${label}:** `;
 
         if (dietype == 'd10') {
