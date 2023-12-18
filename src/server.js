@@ -8,7 +8,7 @@ import {
   InteractionType,
   verifyKey,
 } from 'discord-interactions';
-import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND } from './commands.js';
+import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND, VERIFY_COMMAND } from './commands.js';
 import { getRoll } from './roll.js';
 import { autocomplete, findEntryInJSON } from './lookup.js';
 import { createClient } from '@supabase/supabase-js';
@@ -157,7 +157,7 @@ router.post('/', async (request, env) => {
           const auth_data = await supabase
             .from('authorized_users')
             .select()
-            .eq('id', parseInt(interaction['user']['id']))
+            .eq('id', interaction['user']['id'])
 
           //if full text authorized
           if (auth_data['data'][0] != undefined)
@@ -213,7 +213,7 @@ router.post('/', async (request, env) => {
             const auth_data = await supabase
               .from('authorized_users')
               .select()
-              .eq('id', parseInt(interaction['user']['id']))
+              .eq('id', interaction['user']['id'])
 
             message = `>>> ## ${entry['name']}\n`
             //if full text authorized
@@ -242,6 +242,34 @@ router.post('/', async (request, env) => {
             message = `>>> Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['value']}**\n\nHint: Maybe in a different category or spelled different.`;
           }
         }
+        return new JsonResponse({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+          data: {
+            content: message,
+          },
+        });
+      }
+
+      /**
+       * VERIFY COMMAND
+       */
+      case VERIFY_COMMAND.name.toLowerCase(): {
+        //if user is authorized for full text
+        const { error } = await supabase
+          .from('authorized_users')
+          .insert({ id: interaction['user']['id'], global_name: interaction['user']['global_name'] });
+        
+        console.log(JSON.stringify(error));
+
+        if (error != null)
+        {
+          message = '>>> An error occurred while updating database.'
+        }
+        else
+        {
+          message = '>>> Successfully added to database. You now have unfettered access to the Data Pool.'
+        }
+        
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {

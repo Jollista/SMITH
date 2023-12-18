@@ -105,3 +105,9 @@ export const ITEM_COMMAND = {
   ],
   type: 1,
 };
+
+export const VERIFY_COMMAND = {
+  name: 'verify',
+  description: 'Unlock full text descriptions',
+  type: 1,
+};
