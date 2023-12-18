@@ -319,6 +319,9 @@ router.post('/', async (request, env) => {
         });
       }
     
+      /**
+       * RULE COMMAND AUTOCOMPLETE
+       */
       case RULE_COMMAND.name.toLowerCase(): {
         console.log(`autocomplete for : ${interaction['data']['options'][0]['value']}`,);
         const { data, error } = await supabase
