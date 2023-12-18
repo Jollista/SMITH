@@ -223,7 +223,11 @@ router.post('/', async (request, env) => {
             }
             else
             {
-              message += `${entry['summary']}\n\n`;
+              //if no summary, description is summary, output desc
+              if (Object.prototype.hasOwnProperty.call(entry,'summary'))
+                message += `${entry['summary']}\n\n`;
+              else
+                message += `${entry['desc']}\n\n`;
             }
             
             message += `*${entry['cost']} EB*`;
