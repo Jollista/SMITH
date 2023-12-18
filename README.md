@@ -9,9 +9,8 @@ it to one of your servers, authorize it, and have fun. Or don't. I'm not your mo
 
 ## Features
 
-It rolls dice, it looks up items, and pulls up rules* for you.
+It rolls dice, it looks up items, and pulls up rules for you.
 What else could you possibly need?
-> ! rule command currently non-functional. I'm just one person and it's a lot of rules.
 
 ### Roll
 
@@ -32,12 +31,23 @@ What else could you possibly need?
 
 ### Rule
 
-Currently lacks data required to work. I might fix this eventually. If it is fixed, it will function similar to item.
+> /rule {name}
+- `name` - required; name of the rule to pull up
+
+![rules](img/datapool-rules.gif)
+
+### Verify
+
+Without first verifying your access to the Cyberpunk RED core rulebook, you are not permitted to access the full ruleset with this bot. You will only be shown summaries of information when using the item and rule commands.
+
+> /verify {password}
+- `password` - required; password found in the Cyberpunk RED core rulebook to enable full access to ruleset information
+
+![verify](img/datapool-verify.gif)
 
 ## Disclaimer
 
-This is a fan project. Cyberpunk, Cyberpunk RED and all related copyrights and trademarks are owned by R.Talsorian Games. This project is no way related to or endorsed by R.Talsorian Games. 
->! Don't sue me
+DATA.POOL is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
 
 ## Resources
 
