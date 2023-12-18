@@ -78,6 +78,7 @@ export const RULE_COMMAND = {
       name: 'name',
       description: 'The category of rule you want to look up',
       required: true,
+      autocomplete: true,
     },
   ],
   type: 1,

@@ -209,30 +209,56 @@ router.post('/', async (request, env) => {
     }
   }
 
+  /**
+   * AUTOCOMPLETE STUFF
+   */
   if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) {
-    console.log(
-      `autocomplete for : ${interaction['data']['options'][1]['value']}`,
-    );
 
-    //get relevant json from supabase
-    const { data, error } = await supabase
-      .from('items')
-      .select()
-      .eq('type', interaction['data']['options'][0]['value']);
+    switch (interaction.data.name.toLowerCase()) {
+      /**
+       * ITEM COMMAND AUTOCOMPLETE
+       */
+      case ITEM_COMMAND.name.toLowerCase(): {
+        console.log(`autocomplete for : ${interaction['data']['options'][1]['value']}`,);
+        //get relevant json from supabase
+        const { data, error } = await supabase
+          .from('items')
+          .select()
+          .eq('type', interaction['data']['options'][0]['value']);
 
-    var choices = autocomplete(
-      interaction['data']['options'][1]['value'],
-      data[0]['contents'],
-    );
-    console.log('this is just to appease lint ' + error);
-    console.log(choices);
+        var choices = autocomplete(interaction['data']['options'][1]['value'], data[0]['contents'],);
+        console.log(`${JSON.stringify(data[0]['contents'])}`);
+        console.log('this is just to appease lint ' + error);
+        console.log(choices);
 
-    return new JsonResponse({
-      type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE_RESULT,
-      data: {
-        choices: choices,
-      },
-    });
+        return new JsonResponse({
+          type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE_RESULT,
+          data: {
+            choices: choices,
+          },
+        });
+      }
+    
+      case RULE_COMMAND.name.toLowerCase(): {
+        console.log(`autocomplete for : ${interaction['data']['options'][0]['value']}`,);
+        const { data, error } = await supabase
+          .from('rules')
+          .select()
+
+        //var choices = autocompleteRule(interaction['data']['options'][0]['value'], data[0]['contents'],);
+        console.log(`data for rule autocomplete is ${JSON.stringify(data)}`)
+        console.log('this is just to appease lint ' + error);
+
+        var choices = autocomplete(interaction['data']['options'][0]['value'], data,);
+
+        return new JsonResponse({
+          type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE_RESULT,
+          data: {
+            choices: choices,
+          },
+        });
+      }
+    }
   }
 
   console.error('Unknown Type');
