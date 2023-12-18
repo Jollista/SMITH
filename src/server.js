@@ -254,24 +254,32 @@ router.post('/', async (request, env) => {
        * VERIFY COMMAND
        */
       case VERIFY_COMMAND.name.toLowerCase(): {
-        //if user is authorized for full text
-        const { error } = await supabase
-          .from('authorized_users')
-          .insert({ id: interaction['user']['id'], global_name: interaction['user']['global_name'] });
-        
-        console.log(JSON.stringify(error));
-
-        if (error != null)
+        //if password is correct
+        if (interaction['data']['options'][0]['value'].toUpperCase() == 'PNEUMO')
         {
-          message = '>>> An error occurred while updating database.'
-          if (error['code']=23505)
+          //if user is authorized for full text
+          const { error } = await supabase
+            .from('authorized_users')
+            .insert({ id: interaction['user']['id'], global_name: interaction['user']['global_name'] });
+          
+          console.log(JSON.stringify(error));
+
+          if (error != null)
           {
-            message += '\nAttempted verification failed because user is already in database.';
+            message = '>>> An error occurred while updating database.'
+            if (error['code'] == 23505)
+            {
+              message += '\nAttempted verification failed because user is already in database.';
+            }
+          }
+          else
+          {
+            message = '>>> Successfully added to database. You now have unfettered access to the Data Pool.';
           }
         }
         else
         {
-          message = '>>> Successfully added to database. You now have unfettered access to the Data Pool.'
+          message = '>>> Password is incorrect.';
         }
         
         return new JsonResponse({
