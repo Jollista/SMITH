@@ -213,7 +213,9 @@ router.post('/', async (request, env) => {
    * AUTOCOMPLETE STUFF
    */
   if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) {
-
+    // initialize var to appease lint, even though it's stupid
+    var choices;
+    
     switch (interaction.data.name.toLowerCase()) {
       /**
        * ITEM COMMAND AUTOCOMPLETE
@@ -226,7 +228,7 @@ router.post('/', async (request, env) => {
           .select()
           .eq('type', interaction['data']['options'][0]['value']);
 
-        var choices = autocomplete(interaction['data']['options'][1]['value'], data[0]['contents'],);
+        choices = autocomplete(interaction['data']['options'][1]['value'], data[0]['contents'],);
         console.log(`${JSON.stringify(data[0]['contents'])}`);
         console.log('this is just to appease lint ' + error);
         console.log(choices);
@@ -249,7 +251,7 @@ router.post('/', async (request, env) => {
         console.log(`data for rule autocomplete is ${JSON.stringify(data)}`)
         console.log('this is just to appease lint ' + error);
 
-        var choices = autocomplete(interaction['data']['options'][0]['value'], data,);
+        choices = autocomplete(interaction['data']['options'][0]['value'], data,);
 
         return new JsonResponse({
           type: InteractionResponseType.APPLICATION_COMMAND_AUTOCOMPLETE_RESULT,
