@@ -171,7 +171,7 @@ router.post('/', async (request, env) => {
           }
           else //user is not authorized for full text
           {
-            message += `## ${rule}\n${data[0]['summary']}\n\n*CPR ${data[0]['page']}*\nSUMMARY`;
+            message += `## ${rule}\n*In short*\n\n${data[0]['summary']}\n\n*CPR ${data[0]['page']}*`;
           }
         }
         else
@@ -206,13 +206,36 @@ router.post('/', async (request, env) => {
         if (error != null) 
           message = `Error retrieving data`;
         else 
-        {
-          message = (entry != -1) ? `>>> ## ${entry['name']}\n${entry['desc']}\n\n*${entry['cost']} EB*`
-              : `>>> Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['value']}**\n\nHint: Maybe in a different category or spelled different.`;
-
-          if (Object.prototype.hasOwnProperty.call(entry, 'type')) 
+        { 
+          if (entry != -1) //item found
           {
-            message += ` *| ${entry['type']}*`;
+            //if user is authorized for full text
+            const auth_data = await supabase
+              .from('authorized_users')
+              .select()
+              .eq('id', parseInt(interaction['user']['id']))
+
+            message = `>>> ## ${entry['name']}\n`
+            //if full text authorized
+            if (auth_data['data'][0] != undefined)
+            {
+              message += `${entry['desc']}\n\n`;
+            }
+            else
+            {
+              message += `${entry['summary']}\n\n`;
+            }
+            
+            message += `*${entry['cost']} EB*`;
+
+            if (Object.prototype.hasOwnProperty.call(entry, 'type')) 
+            {
+              message += ` *| ${entry['type']}*`;
+            }
+          }
+          else //item not found
+          {
+            message = `>>> Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['value']}**\n\nHint: Maybe in a different category or spelled different.`;
           }
         }
         return new JsonResponse({
