@@ -61,6 +61,9 @@ router.post('/', async (request, env) => {
   }
 
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
+    console.log(JSON.stringify(interaction));
+    const userID = (Object.prototype.hasOwnProperty.call(interaction, 'member')) ? interaction['member']['user']['id'] : interaction['member']['user']['id'];
+
     // Most user commands will come as `APPLICATION_COMMAND`.
     switch (interaction.data.name.toLowerCase()) {
       /**
@@ -70,7 +73,7 @@ router.post('/', async (request, env) => {
         // Send a message into the channel where command was triggered from
         //get user ID for pinging
         console.log(JSON.stringify(interaction));
-        const userId = interaction['user']['id'];
+        //const userId = interaction['user']['id'];
         
         //get arguments
         //dietype
@@ -83,7 +86,7 @@ router.post('/', async (request, env) => {
         
         //output vars
         var roll;
-        message = `<@${userId}>\n`;
+        message = `<@${userID}>\n`;
         message += `**${label}:** `;
 
         if (dietype == 'd10') {
@@ -157,7 +160,7 @@ router.post('/', async (request, env) => {
           const auth_data = await supabase
             .from('authorized_users')
             .select()
-            .eq('id', interaction['user']['id'])
+            .eq('id', userID)
 
           //if full text authorized
           if (auth_data['data'][0] != undefined)
@@ -213,7 +216,7 @@ router.post('/', async (request, env) => {
             const auth_data = await supabase
               .from('authorized_users')
               .select()
-              .eq('id', interaction['user']['id'])
+              .eq('id', userID)
 
             message = `>>> ## ${entry['name']}\n`
             //if full text authorized
@@ -260,7 +263,7 @@ router.post('/', async (request, env) => {
           //if user is authorized for full text
           const { error } = await supabase
             .from('authorized_users')
-            .insert({ id: interaction['user']['id'], global_name: interaction['user']['global_name'] });
+            .insert({ id: userID, global_name: interaction['user']['global_name'] });
           
           console.log(JSON.stringify(error));
 
