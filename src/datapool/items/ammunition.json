@@ -33,7 +33,7 @@
         "name" : "Flashbang",
         "cost" : "100",
         "desc" : "**Ammo Types Available:** Grenades only.\n\nWhen using this ammunition, you deal no damage with your attack. Anyone hit by your attack must instead attempt to beat a DV15 Resist Torture/Drugs Check. Anyone who fails suffers the Damaged Eye and Damaged Ear Critical Injuries (see pg. 188) for the next minute. You do not take the Bonus Damage from the Critical Injuries.",
-        "summary" : "**Ammo Types Available: Grenades.\n\nAttacks deal no damage, instead targets need to save against Flashbang. DV15 Resist Torture/Drugs Check, Damaged Eye + Damaged Ear critical injuries (pg. 188) for 1 minute on fail. No bonus damage."
+        "summary" : "**Ammo Types Available:** Grenades.\n\nAttacks deal no damage, instead targets need to save against Flashbang. DV15 Resist Torture/Drugs Check, Damaged Eye + Damaged Ear critical injuries (pg. 188) for 1 minute on fail. No bonus damage."
     },
     {
         "name" : "Incendiary",
