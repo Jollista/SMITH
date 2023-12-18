@@ -1,3 +1,5 @@
+import { createClient } from '@supabase/supabase-js';
+
 /**
  * Find a given entry in JSON where name matches entry.
  *

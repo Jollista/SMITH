@@ -140,7 +140,7 @@ router.post('/', async (request, env) => {
         //get rule from database by name
         var rule = interaction['data']['options'][0]['value'];
         console.log(rule);
-        const {data, error } = await supabase
+        const { data, error } = await supabase
           .from('rules')
           .select()
           .eq('name', rule);
@@ -153,12 +153,25 @@ router.post('/', async (request, env) => {
         message = '>>> ';
         if (data[0] != undefined)
         {
-          message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
-          //if message is longer than discord max
-          if (message.length >= 2000)
+          //if user is authorized for full text
+          const auth_data = await supabase
+            .from('authorized_users')
+            .select()
+            .eq('id', parseInt(interaction['user']['id']))
+
+          if (auth_data['data'][0] != undefined)
           {
-            var overflow = message.length - 2000;
-            message = `>>> ## ${rule}\n${data[0]['text'].substr(0, data[0]['text'].length-(overflow+4))}\n...\n\n*CPR ${data[0]['page']}*`
+            message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
+            //if message is longer than discord max
+            if (message.length >= 2000)
+            {
+              var overflow = message.length - 2000;
+              message = `>>> ## ${rule}\n${data[0]['text'].substr(0, data[0]['text'].length-(overflow+4))}\n...\n\n*CPR ${data[0]['page']}*`
+            }
+          }
+          else //user is not authorized for full text
+          {
+            message += `## ${rule}\n${data[0]['summary']}\n\n*CPR ${data[0]['page']}*\nSUMMARY`;
           }
         }
         else
@@ -254,7 +267,7 @@ router.post('/', async (request, env) => {
           .select()
 
         //var choices = autocompleteRule(interaction['data']['options'][0]['value'], data[0]['contents'],);
-        console.log(`data for rule autocomplete is ${JSON.stringify(data)}`)
+        //console.log(`data for rule autocomplete is ${JSON.stringify(data)}`)
         console.log('this is just to appease lint ' + error);
 
         choices = autocomplete(interaction['data']['options'][0]['value'], data,);
