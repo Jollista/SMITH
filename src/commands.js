@@ -105,3 +105,17 @@ export const ITEM_COMMAND = {
   ],
   type: 1,
 };
+
+export const VERIFY_COMMAND = {
+  name: 'verify',
+  description: 'Unlock full text descriptions',
+  options: [
+    {
+      type: 3,
+      name: 'name',
+      description: 'Who says the quote on page 196 of the Core Rulebook?',
+      required: true,
+    }
+  ],
+  type: 1,
+};

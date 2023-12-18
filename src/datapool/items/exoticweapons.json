@@ -2,72 +2,86 @@
     {
         "name" : "Air Pistol",
         "cost" : "100",
-        "desc" : "An Exotic Medium Pistol. Fires paint balls, which are typically filled with paint, and thus deal no damage. If you filled the paint balls with Acid however, each Acid Paintball still deals no damage, but lowers the SP of the target's armor (worn in the location shot) by one with each successful hit. Great for trying to capture someone alive. Damage dealt by this weapon cannot cause a Critical Injury. Ammunition costs the same as for a normal Medium Pistol, even if filled with Acid."
+        "desc" : "An Exotic Medium Pistol. Fires paint balls, which are typically filled with paint, and thus deal no damage. If you filled the paint balls with Acid however, each Acid Paintball still deals no damage, but lowers the SP of the target's armor (worn in the location shot) by one with each successful hit. Great for trying to capture someone alive. Damage dealt by this weapon cannot cause a Critical Injury. Ammunition costs the same as for a normal Medium Pistol, even if filled with Acid.",
+        "summary" : "Medium Pistol. Deals no damage. Fires paint balls, or Acid Paintballs which ablate armor by 1."
     },
     {
         "name" : "Battleglove",
         "cost" : "1000",
-        "desc" : "A heavy gauntlet covering the hand and forearm. Contains three option slots for Cyberarm or Cyberlimb options. When worn, the options stored in the glove's slots can be accessed. Putting on a Battleglove and taking one off is an Action. The cost to purchase and install a Cyberarm option into the Battleglove is the same cost as doing so in a Cyberarm. Any options stored in a Cyberarm or meat arm the Battleglove is being worn over are inaccessible while the Battleglove is being worn. Cannot be concealed."
+        "desc" : "A heavy gauntlet covering the hand and forearm. Contains three option slots for Cyberarm or Cyberlimb options. When worn, the options stored in the glove's slots can be accessed. Putting on a Battleglove and taking one off is an Action. The cost to purchase and install a Cyberarm option into the Battleglove is the same cost as doing so in a Cyberarm. Any options stored in a Cyberarm or meat arm the Battleglove is being worn over are inaccessible while the Battleglove is being worn. Cannot be concealed.",
+        "summary" : "Heavy unconcealable gauntlet. 3 Option Slots for Cyberarm or Cyberlimb options. Options of arm it's worn over are inaccessible."
     },
     {
         "name" : "Constitution Arms Hurricane Assault Weapon",
         "cost" : "5000",
-        "desc" : "An Exotic 2 ROF Shotgun. It cannot make Aimed Shots. Its drum holds 16 shots. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted."
+        "desc" : "An Exotic 2 ROF Shotgun. It cannot make Aimed Shots. Its drum holds 16 shots. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted.",
+        "summary" : "Shotgun with ROF 2. No aimed shots. Drum holds 16 shots. Reload requires 2 Actions. Must be mounted or must have BODY >= 11."
     },
     {
         "name" : "Dartgun",
         "cost" : "100",
-        "desc" : "An Exotic Very Heavy Pistol that can only load Non-Basic Arrow Ammunition. Unlike other weapons that fire Arrows, a Dartgun has a clip of 8 Non-Basic Arrows and must be reloaded just like a typical Very Heavy Pistol."
+        "desc" : "An Exotic Very Heavy Pistol that can only load Non-Basic Arrow Ammunition. Unlike other weapons that fire Arrows, a Dartgun has a clip of 8 Non-Basic Arrows and must be reloaded just like a typical Very Heavy Pistol.",
+        "summary" : "Very Heavy Pistol, uses Non-Basic Arrows. Holds 8 arrows. Otherwise works like a pistol."
     },
     {
         "name" : "Flamethrower",
         "cost" : "500",
-        "desc" : "An Exotic Shotgun fired with the Heavy Weapons Skill instead of the Shoulder Arms Skill. Mechanically, the flamethrower is a Shotgun that can only fire incendiary shotgun shells (ammunition cost is also the same as Incendiary Shotgun Shells), except that while your targets are ignited, until they spend an Action to put themselves out, they take 4 damage to their HP at the end of their turns. If they were already on fire, this fire effect replaces one that would deal less damage. Damage dealt by this weapon cannot cause a Critical Injury, and it cannot be used to make Aimed Shots."
+        "desc" : "An Exotic Shotgun fired with the Heavy Weapons Skill instead of the Shoulder Arms Skill. Mechanically, the flamethrower is a Shotgun that can only fire incendiary shotgun shells (ammunition cost is also the same as Incendiary Shotgun Shells), except that while your targets are ignited, until they spend an Action to put themselves out, they take 4 damage to their HP at the end of their turns. If they were already on fire, this fire effect replaces one that would deal less damage. Damage dealt by this weapon cannot cause a Critical Injury, and it cannot be used to make Aimed Shots.",
+        "summary" : "Shotgun uses Heavy Weapons Skill. Shotgun that fires incendiary shells, but fire deals 4 damage instead of 2. No critical injuries or Aimed Shots."
     },
     {
         "name" : "Kendachi Mono-Three",
         "cost" : "5000",
-        "desc" : "An Excellent Quality Two-Handed Exotic Very Heavy Melee Weapon. With the correct biometric key, damage dealt by this weapon ignores the target's armor entirely if it is lower than SP11. Armor with a higher SP is still interacted with as normal. A high-tech katana with a nearly transparent crystal blade. Orbital crystal reinforces its redesigned microscopically serrated edge which vibrates four thousand times a minute when its handle is gripped by a user with a correct biometric key. In the hands of a user without the correct biometric key, the blade will not vibrate, leaving it only an Excellent Quality Two-Handed Exotic Very Heavy Melee Weapon. At no additional cost, any color of laser can be installed into the hilt to refract within the crystal blade, giving it a flaring neon glow. The most popular color is red."
+        "desc" : "An Excellent Quality Two-Handed Exotic Very Heavy Melee Weapon. With the correct biometric key, damage dealt by this weapon ignores the target's armor entirely if it is lower than SP11. Armor with a higher SP is still interacted with as normal. A high-tech katana with a nearly transparent crystal blade. Orbital crystal reinforces its redesigned microscopically serrated edge which vibrates four thousand times a minute when its handle is gripped by a user with a correct biometric key. In the hands of a user without the correct biometric key, the blade will not vibrate, leaving it only an Excellent Quality Two-Handed Exotic Very Heavy Melee Weapon. At no additional cost, any color of laser can be installed into the hilt to refract within the crystal blade, giving it a flaring neon glow. The most popular color is red.",
+        "summary" : "Excellent Quality Two-Handed Exotiy Very Heavy Melee Weapon. With biometric key, damage ignores SP < 11."
     },
     {
         "name" : "Malorian Arms 3561",
         "cost" : "10000",
-        "desc" : "An Excellent Quality Exotic Very Heavy Pistol. It deals 5d6 damage with a single shot, and comes perma- nently installed with the Smartgun Link weapon attachment which must be connected (via Interface Plugs or a Subdermal Grip) in order for the weapon to operate. Extremely rare and sought after, this weapon is even more expensive today than it was in the past, when one even can be found for sale."
+        "desc" : "An Excellent Quality Exotic Very Heavy Pistol. It deals 5d6 damage with a single shot, and comes permanently installed with the Smartgun Link weapon attachment which must be connected (via Interface Plugs or a Subdermal Grip) in order for the weapon to operate. Extremely rare and sought after, this weapon is even more expensive today than it was in the past, when one even can be found for sale.",
+        "summary" : "Excellent Quality Exotic Very Heavy Pistol. 5d6 single shot damage + preinstalled Smartgun Link."
     },
     {
         "name" : "Microwaver",
         "cost" : "500",
-        "desc" : "An Exotic Very Heavy Pistol. Instead of dealing damage, on a hit it forces the target to try to beat a DV15 Cybertech Check. If they fail, the GM chooses two pieces of their cyberware or carried electronics to become inoperable for a minute. Cyberlimbs that are rendered inoperable act as their meat counterparts do when they have been dismembered, but they still hang loosely. See Critical Injuries. Ammunition is costless, as it runs off easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots. Extra battery packs are 50eb (Costly)."
+        "desc" : "An Exotic Very Heavy Pistol. Instead of dealing damage, on a hit it forces the target to try to beat a DV15 Cybertech Check. If they fail, the GM chooses two pieces of their cyberware or carried electronics to become inoperable for a minute. Cyberlimbs that are rendered inoperable act as their meat counterparts do when they have been dismembered, but they still hang loosely. See Critical Injuries. Ammunition is costless, as it runs off easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots. Extra battery packs are 50eb (Costly).",
+        "summary" : "Attacks deal no damage, instead targets must save against EMP. DV15 Cybertech Check, 2 pieces of cyberware or electronics stop working for 1 minute on a fail."
     },
     {
         "name" : "Militech \"Cowboy\" U-56 Grenade Launcher",
         "cost" : "5000",
-        "desc" : "An Exotic 2 ROF Grenade Launcher. Its magazine holds four grenades. Despite being an Exotic Weapon, it is capable of firing all forms of Grenade Ammunition. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted."
+        "desc" : "An Exotic 2 ROF Grenade Launcher. Its magazine holds four grenades. Despite being an Exotic Weapon, it is capable of firing all forms of Grenade Ammunition. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted.",
+        "summary" : "Grenade Launcher with ROF 2. Magazine holds 4 grenades. Can fire all grenades. Reload requires 2 Actions. Must be mounted or must have BODY >= 11."
     },
     {
         "name" : "Rhinemetall EMG-86 Railgun",
         "cost" : "5000",
-        "desc" : "An Exotic Assault Rifle that is incapable of Autofire and Aimed Shots. It is fired with the Heavy Weapons Skill instead of the Shoulder Arms Skill. The weapon holds 4 shots. Damage dealt by this weapon ignores the target's armor entirely if it is lower than SP11. Armor with a higher SP is still interacted with as normal. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted."
+        "desc" : "An Exotic Assault Rifle that is incapable of Autofire and Aimed Shots. It is fired with the Heavy Weapons Skill instead of the Shoulder Arms Skill. The weapon holds 4 shots. Damage dealt by this weapon ignores the target's armor entirely if it is lower than SP11. Armor with a higher SP is still interacted with as normal. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted.",
+        "summary" : "Assault Rifle uses Heavy Weapons Skill. No Autofire or Aimed Shots. 4 shots. Damage ignores SP < 11. Reload requires 2 Actions. Must be mounted or must have BODY >= 11."
     },
     {
         "name" : "Shrieker",
         "cost" : "500",
-        "desc" : "An Exotic Very Heavy Pistol. Whenever a user fires this weapon without some form of ear protection, they suffer the Damaged Ear Critical Injury. Instead of dealing damage, on a hit it forces the target to try to beat a DV15 Resist Torture/Drugs Check. If they fail, they suffer the Damaged Ear Critical Injury. Ammunition is costless as it runs off of easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots. Extra battery packs are 50eb (Costly)."
+        "desc" : "An Exotic Very Heavy Pistol. Whenever a user fires this weapon without some form of ear protection, they suffer the Damaged Ear Critical Injury. Instead of dealing damage, on a hit it forces the target to try to beat a DV15 Resist Torture/Drugs Check. If they fail, they suffer the Damaged Ear Critical Injury. Ammunition is costless as it runs off of easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots. Extra battery packs are 50eb (Costly).",
+        "summary" : "Very Heavy Pistol. User gets Damaged Ear Critical Injury if fired without ear protection. Attacks deal no damage, instead targets must save against Shrieker. DV15 Resist Torture/Drugs Check, Damaged Ear Critical Injury on a fail. Ammo runs on rechargable (1 hour) battery packs that need to be replaced after 8 shots, and cost 50 eb."
     },
     {
         "name" : "Stun Baton",
         "cost" : "100",
-        "desc" : "A One-Handed Exotic Medium Melee Weapon. If damage dealt by it would reduce a target to under 1 HP, they are instead Unconscious at 1 HP. Damage dealt by this weapon cannot cause a Critical Injury and doesn't ablate armor."
+        "desc" : "A One-Handed Exotic Medium Melee Weapon. If damage dealt by it would reduce a target to under 1 HP, they are instead Unconscious at 1 HP. Damage dealt by this weapon cannot cause a Critical Injury and doesn't ablate armor.",
+        "summary" : "Medium Melee Weapon. Damage that would reduce target below 1 HP instead renders target Unconscious at 1 HP. Cannot cause Critical Injury or ablate armor."
     },
     {
         "name" : "Stun Gun",
         "cost" : "100",
-        "desc" : "An Exotic Heavy Pistol. If damage dealt by it would reduce a target to under 1 HP, they are instead Unconscious at 1 HP. Damage dealt by this weapon cannot cause a Critical Injury and doesn't ablate armor. Ammunition is costless as it runs off easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots. Extra battery packs are 50eb (Costly)."
+        "desc" : "An Exotic Heavy Pistol. If damage dealt by it would reduce a target to under 1 HP, they are instead Unconscious at 1 HP. Damage dealt by this weapon cannot cause a Critical Injury and doesn't ablate armor. Ammunition is costless as it runs off easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots. Extra battery packs are 50eb (Costly).",
+        "summary" : "Heavy Pistol. Damage that would reduce target below 1 HP instead renders target Unconscious at 1 HP. Cannot cause Critical Injury or ablate armor."
     },
     {
         "name" : "Tsunami Arms Helix",
         "cost" : "5000",
-        "desc" : "An Exotic Assault Rifle, fired entirely with the Autofire Skill. It can only be fired using Autofire and it cannot make Aimed Shots or fire in single shot. It holds 40 bullets. When fired, the Helix consumes 20 bullets with every attack. If you hit, you roll 2d6 for damage, and multiply it by the amount you beat the DV to hit your target, up to a maximum of 5. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted."
+        "desc" : "An Exotic Assault Rifle, fired entirely with the Autofire Skill. It can only be fired using Autofire and it cannot make Aimed Shots or fire in single shot. It holds 40 bullets. When fired, the Helix consumes 20 bullets with every attack. If you hit, you roll 2d6 for damage, and multiply it by the amount you beat the DV to hit your target, up to a maximum of 5. Reloading this weapon requires using two Actions, and thus can only be done over the course of two turns. Firing this weapon requires BODY 11 or higher unless it is mounted.",
+        "summary" : "Assault Rifle. Can only use Autofire, cannot make Aimed Shots or single shot. Holds 40 bullets. Each attack takes 20 bullets. Autofire max 5. Reload requires 2 Actions. Must be mounted or must have BODY >= 11."
     }
 ]
         

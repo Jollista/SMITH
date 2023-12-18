@@ -8,7 +8,7 @@ import {
   InteractionType,
   verifyKey,
 } from 'discord-interactions';
-import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND } from './commands.js';
+import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND, VERIFY_COMMAND } from './commands.js';
 import { getRoll } from './roll.js';
 import { autocomplete, findEntryInJSON } from './lookup.js';
 import { createClient } from '@supabase/supabase-js';
@@ -140,7 +140,7 @@ router.post('/', async (request, env) => {
         //get rule from database by name
         var rule = interaction['data']['options'][0]['value'];
         console.log(rule);
-        const {data, error } = await supabase
+        const { data, error } = await supabase
           .from('rules')
           .select()
           .eq('name', rule);
@@ -153,20 +153,33 @@ router.post('/', async (request, env) => {
         message = '>>> ';
         if (data[0] != undefined)
         {
-          message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
-          //if message is longer than discord max
-          if (message.length >= 2000)
+          //if user is authorized for full text
+          const auth_data = await supabase
+            .from('authorized_users')
+            .select()
+            .eq('id', interaction['user']['id'])
+
+          //if full text authorized
+          if (auth_data['data'][0] != undefined)
           {
-            var overflow = message.length - 2000;
-            message = `>>> ## ${rule}\n${data[0]['text'].substr(0, data[0]['text'].length-(overflow+4))}\n...\n\n*CPR ${data[0]['page']}*`
+            message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
+            
+            //if message is longer than discord max
+            if (message.length >= 2000)
+            {
+              var overflow = message.length - 2000;
+              message = `>>> ## ${rule}\n${data[0]['text'].substr(0, data[0]['text'].length-(overflow+4))}\n...\n\n*CPR ${data[0]['page']}*`
+            }
+          }
+          else //user is not authorized for full text
+          {
+            message += `## ${rule}\n*In short*\n\n${data[0]['summary']}\n\n*CPR ${data[0]['page']}*`;
           }
         }
         else
         {
           message += 'Rule not found';
         }
-        
-        console.log(message);
         
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
@@ -193,15 +206,82 @@ router.post('/', async (request, env) => {
         if (error != null) 
           message = `Error retrieving data`;
         else 
-        {
-          message = (entry != -1) ? `>>> ## ${entry['name']}\n${entry['desc']}\n\n*${entry['cost']} EB*`
-              : `>>> Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['value']}**\n\nHint: Maybe in a different category or spelled different.`;
-
-          if (Object.prototype.hasOwnProperty.call(entry, 'type')) 
+        { 
+          if (entry != -1) //item found
           {
-            message += ` *| ${entry['type']}*`;
+            //if user is authorized for full text
+            const auth_data = await supabase
+              .from('authorized_users')
+              .select()
+              .eq('id', interaction['user']['id'])
+
+            message = `>>> ## ${entry['name']}\n`
+            //if full text authorized
+            if (auth_data['data'][0] != undefined)
+            {
+              message += `${entry['desc']}\n\n`;
+            }
+            else
+            {
+              //if no summary, description is summary, output desc
+              if (Object.prototype.hasOwnProperty.call(entry,'summary'))
+                message += `${entry['summary']}\n\n`;
+              else
+                message += `${entry['desc']}\n\n`;
+            }
+            
+            message += `*${entry['cost']} EB*`;
+
+            if (Object.prototype.hasOwnProperty.call(entry, 'type')) 
+            {
+              message += ` *| ${entry['type']}*`;
+            }
+          }
+          else //item not found
+          {
+            message = `>>> Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['value']}**\n\nHint: Maybe in a different category or spelled different.`;
           }
         }
+        return new JsonResponse({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+          data: {
+            content: message,
+          },
+        });
+      }
+
+      /**
+       * VERIFY COMMAND
+       */
+      case VERIFY_COMMAND.name.toLowerCase(): {
+        //if password is correct
+        if (interaction['data']['options'][0]['value'].toUpperCase() == 'PNEUMO')
+        {
+          //if user is authorized for full text
+          const { error } = await supabase
+            .from('authorized_users')
+            .insert({ id: interaction['user']['id'], global_name: interaction['user']['global_name'] });
+          
+          console.log(JSON.stringify(error));
+
+          if (error != null)
+          {
+            message = '>>> An error occurred while updating database.'
+            if (error['code'] == 23505)
+            {
+              message += '\nAttempted verification failed because user is already in database.';
+            }
+          }
+          else
+          {
+            message = '>>> Successfully added to database. You now have unfettered access to the Data Pool.';
+          }
+        }
+        else
+        {
+          message = '>>> Password is incorrect.';
+        }
+        
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
@@ -247,6 +327,9 @@ router.post('/', async (request, env) => {
         });
       }
     
+      /**
+       * RULE COMMAND AUTOCOMPLETE
+       */
       case RULE_COMMAND.name.toLowerCase(): {
         console.log(`autocomplete for : ${interaction['data']['options'][0]['value']}`,);
         const { data, error } = await supabase
@@ -254,7 +337,7 @@ router.post('/', async (request, env) => {
           .select()
 
         //var choices = autocompleteRule(interaction['data']['options'][0]['value'], data[0]['contents'],);
-        console.log(`data for rule autocomplete is ${JSON.stringify(data)}`)
+        //console.log(`data for rule autocomplete is ${JSON.stringify(data)}`)
         console.log('this is just to appease lint ' + error);
 
         choices = autocomplete(interaction['data']['options'][0]['value'], data,);
