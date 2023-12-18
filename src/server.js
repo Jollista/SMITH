@@ -264,6 +264,10 @@ router.post('/', async (request, env) => {
         if (error != null)
         {
           message = '>>> An error occurred while updating database.'
+          if (error['code']=23505)
+          {
+            message += '\nAttempted verification failed because user is already in database.';
+          }
         }
         else
         {
