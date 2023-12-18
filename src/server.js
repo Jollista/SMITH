@@ -154,6 +154,12 @@ router.post('/', async (request, env) => {
         if (data[0] != undefined)
         {
           message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
+          //if message is longer than discord max
+          if (message.length >= 2000)
+          {
+            var overflow = message.length - 2000;
+            message = `>>> ## ${rule}\n${data[0]['text'].substr(0, data[0]['text'].length-(overflow+4))}\n...\n\n*CPR ${data[0]['page']}*`
+          }
         }
         else
         {
