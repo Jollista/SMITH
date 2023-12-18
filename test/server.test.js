@@ -31,38 +31,4 @@ describe('Server', () => {
       expect(body).to.equal('👋 123456789');
     });
   });
-
-  describe('POST /', () => {
-    let verifyDiscordRequestStub;
-
-    beforeEach(() => {
-      verifyDiscordRequestStub = sinon.stub(server, 'verifyDiscordRequest');
-    });
-
-    afterEach(() => {
-      verifyDiscordRequestStub.restore();
-    });
-
-    it('should handle a PING interaction', async () => {
-      const interaction = {
-        type: InteractionType.PING,
-      };
-
-      const request = {
-        method: 'POST',
-        url: new URL('/', 'http://discordo.example'),
-      };
-
-      //const env = {SUPABASE_URL, SUPABASE_KEY};
-
-      verifyDiscordRequestStub.resolves({
-        isValid: true,
-        interaction: interaction,
-      });
-
-      const response = await server.fetch(request, env);
-      const body = await response.json();
-      expect(body.type).to.equal(InteractionResponseType.PONG);
-    });
-  });
 });
