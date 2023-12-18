@@ -159,9 +159,11 @@ router.post('/', async (request, env) => {
             .select()
             .eq('id', parseInt(interaction['user']['id']))
 
+          //if full text authorized
           if (auth_data['data'][0] != undefined)
           {
             message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
+            
             //if message is longer than discord max
             if (message.length >= 2000)
             {
@@ -178,8 +180,6 @@ router.post('/', async (request, env) => {
         {
           message += 'Rule not found';
         }
-        
-        console.log(message);
         
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
