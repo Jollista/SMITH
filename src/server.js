@@ -137,10 +137,35 @@ router.post('/', async (request, env) => {
        * RULE COMMAND
        */
       case RULE_COMMAND.name.toLowerCase(): {
+        //get rule from database by name
+        var rule = interaction['data']['options'][0]['value'];
+        console.log(rule);
+        const {data, error } = await supabase
+          .from('rules')
+          .select()
+          .eq('name', rule);
+
+        //logs to appease lint
+        console.log(`data is ${data[0]}`);
+        console.log(`error is ${error}`);
+
+        //format output
+        message = '>>> ';
+        if (data[0] != undefined)
+        {
+          message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
+        }
+        else
+        {
+          message += 'Rule not found';
+        }
+        
+        console.log(message);
+        
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
-            content: `I'm gonna be real, <@${interaction['member']['user']['id']}>,\nThere's a lotta rules and I ain't got the data yet. I might add this later. Who knows.`,
+            content: message,
           },
         });
       }
@@ -157,18 +182,17 @@ router.post('/', async (request, env) => {
           .eq('type', category);
 
         //retrieve item entry from data
-        const entry = findEntryInJSON(
-          interaction['data']['options'][1]['value'],
-          data[0]['contents'],
-        );
-        if (error != null) message = `Error retrieving data`;
-        else {
-          message =
-            entry != -1
-              ? `>>> ## ${entry['name']}\n${entry['desc']}\n\n*${entry['cost']} EB*`
+        const entry = findEntryInJSON(interaction['data']['options'][1]['value'], data[0]['contents'],);
+
+        if (error != null) 
+          message = `Error retrieving data`;
+        else 
+        {
+          message = (entry != -1) ? `>>> ## ${entry['name']}\n${entry['desc']}\n\n*${entry['cost']} EB*`
               : `>>> Unable to locate **${interaction['data']['options'][0]['value']}** in **${interaction['data']['options'][1]['value']}**\n\nHint: Maybe in a different category or spelled different.`;
 
-          if (Object.prototype.hasOwnProperty.call(entry, 'type')) {
+          if (Object.prototype.hasOwnProperty.call(entry, 'type')) 
+          {
             message += ` *| ${entry['type']}*`;
           }
         }
