@@ -243,7 +243,7 @@ router.post('/', async (request, env) => {
             }
 
             //page number
-            message += `CPR ${entry['page']}*`;
+            message += `\nCPR ${entry['page']}*`;
           }
           else //item not found
           {
