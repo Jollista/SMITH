@@ -277,6 +277,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    Verify
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -293,6 +300,26 @@
   <a href="#resources" class="md-nav__link">
     Resources
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+    <nav class="md-nav" aria-label="Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#so-what-are-you-waiting-for" class="md-nav__link">
+    SO WHAT ARE YOU WAITING FOR?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -385,6 +412,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    Verify
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -404,6 +438,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+    <nav class="md-nav" aria-label="Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#so-what-are-you-waiting-for" class="md-nav__link">
+    SO WHAT ARE YOU WAITING FOR?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -420,17 +474,15 @@
 
 
 <h1 id="datapool">DATA.POOL</h1>
-<p>DATA.POOL is a discord bot for Cyberpunk RED.</p>
+<p>DATA.POOL is a discord bot for Cyberpunk RED. Source code can be found <a href="https://github.com/jollista/DATA.POOL/">here</a></p>
 <h2 id="how-to-use">How to use</h2>
 <p>Simply <a href="https://discord.com/api/oauth2/authorize?client_id=1179341761991159908&amp;permissions=2147485696&amp;scope=bot">invite</a>
 it to one of your servers, authorize it, and have fun. Or don't. I'm not your mom.</p>
 <h2 id="features">Features</h2>
-<p>It rolls dice, it looks up items, and pulls up rules* for you.
+<p>It rolls dice, it looks up items, and pulls up rules for you.
 What else could you possibly need?</p>
-<blockquote>
-<p>! rule command currently non-functional. I'm just one person and it's a lot of rules.</p>
-</blockquote>
 <h3 id="roll">Roll</h3>
+<p>Roll some dice.</p>
 <blockquote>
 <p>/roll {type} {modifier} {label}</p>
 </blockquote>
@@ -441,6 +493,7 @@ What else could you possibly need?</p>
 </ul>
 <p><img alt="rolls" src="img/datapool-rolls.gif" /></p>
 <h3 id="item">Item</h3>
+<p>Pull up an item.</p>
 <blockquote>
 <p>/item {category} {name}</p>
 </blockquote>
@@ -450,14 +503,26 @@ What else could you possibly need?</p>
 </ul>
 <p><img alt="items" src="img/datapool-items.gif" /></p>
 <h3 id="rule">Rule</h3>
-<p>Currently lacks data required to work. I might fix this eventually. If it is fixed, it will function similar to item.</p>
-<h2 id="disclaimer">Disclaimer</h2>
-<p>This is a fan project. Cyberpunk, Cyberpunk RED and all related copyrights and trademarks are owned by R.Talsorian Games. This project is no way related to or endorsed by R.Talsorian Games. </p>
+<p>Pull up a rule.</p>
 <blockquote>
-<p>! Don't sue me</p>
+<p>/rule {name}</p>
 </blockquote>
+<ul>
+<li><code>name</code> - required; name of the rule to pull up</li>
+</ul>
+<p><img alt="rules" src="img/datapool-rules.gif" /></p>
+<h3 id="verify">Verify</h3>
+<p>Without first verifying your access to the Cyberpunk RED core rulebook, you are not permitted to access the full ruleset with this bot. You will only be shown summaries of information when using the item and rule commands.</p>
+<blockquote>
+<p>/verify {password}</p>
+</blockquote>
+<ul>
+<li><code>password</code> - required; password found in the Cyberpunk RED core rulebook to enable full access to ruleset information</li>
+</ul>
+<p><img alt="verify" src="img/datapool-verify.gif" /></p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>DATA.POOL is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.</p>
 <h2 id="resources">Resources</h2>
-<p>GitHub repository <a href="https://github.com/Jollista/DATA.POOL">here</a>.</p>
 <ul>
 <li><a href="https://discord.com/developers/docs/interactions/receiving-and-responding">Discord Interactions API</a></li>
 <li><a href="https://workers.cloudflare.com">Cloudflare workers</a> for hosting</li>
@@ -466,15 +531,13 @@ What else could you possibly need?</p>
 <li>Discord API tutorial <a href="https://github.com/discord/discord-example-apphttps://github.com/discord/discord-example-app">Getting Started</a></li>
 <li><a href="https://github.com/discord/cloudflare-sample-app">Cloudflare worker example</a></li>
 </ul>
+<h2 id="support">Support</h2>
+<p>If you want to support me and the work I do, I have a <a href="https://ko-fi.com/jollista">ko-fi</a>.</p>
 <p><br>
 <br>
 <br></p>
-<blockquote>
-<p>SO WHAT ARE YOU WAITING FOR?
-<a href="https://discord.com/api/oauth2/authorize?client_id=1179341761991159908&amp;permissions=2147485696&amp;scope=bot">ENTER THE NET</a></p>
-</blockquote>
-<p><img alt="datapool" src="img/datapool.png" /></p>
-<p><em><a href="https://www.artstation.com/artwork/obBbRq">N0T HUM4N</a> by <a href="https://beacons.ai/elisyan">Bryan "Elisyan" Maciel</a></em></p>
+<h3 id="so-what-are-you-waiting-for">SO WHAT ARE YOU WAITING FOR?</h3>
+<h1 id="enter-the-net"><a href="https://discord.com/api/oauth2/authorize?client_id=1179341761991159908&amp;permissions=2147485696&amp;scope=bot">ENTER THE NET</a></h1>
 
 
 
