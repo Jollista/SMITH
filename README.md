@@ -57,7 +57,7 @@ Without first verifying your access to the Cyberpunk RED core rulebook, you are 
 
 ## Disclaimer
 
-DATA.POOL is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
+DATA.POOL is unofficial content provided under the [Homebrew Content Policy of R. Talsorian Games](https://rtalsoriangames.com/homebrew-content-policy/) and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
 
 ## Resources
 
