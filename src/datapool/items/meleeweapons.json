@@ -3,109 +3,125 @@
         "name" : "Light Melee Weapon",
         "cost" : "50",
         "desc" : "**Damage:** 1d6\n**RoF:** 2\n**Concealable?** YES\n**Examples:** Combat Knife, Tomahawk",
-        "summary" : "**Damage:** 1d6\n**RoF:** 2\n**Concealable?** YES"
+        "summary" : "**Damage:** 1d6\n**RoF:** 2\n**Concealable?** YES",
+        "page" : 340
     },
     {
         "name" : "Medium Melee Weapon",
         "cost" : "50",
         "desc" : "**Damage:** 2d6\n**RoF:** 2\n**Concealable?** NO\n**Examples:** Baseball Bat, Crowbar, Machete",
-        "summary" : "**Damage:** 2d6\n**RoF:** 2\n**Concealable?** NO"
+        "summary" : "**Damage:** 2d6\n**RoF:** 2\n**Concealable?** NO",
+        "page" : 340
     },
     {
         "name" : "Heavy Melee Weapon",
         "cost" : "100",
         "desc" : "**Damage:** 3d6\n**RoF:** 2\n**Concealable?** NO\n**Examples:** Lead Pipe, Sword, Spiked Bat",
-        "summary" : "**Damage:** 3d6\n**RoF:** 2\n**Concealable?** NO"
+        "summary" : "**Damage:** 3d6\n**RoF:** 2\n**Concealable?** NO",
+        "page" : 340
     },
     {
         "name" : "Very Heavy Melee Weapon",
         "cost" : "500",
         "desc" : "**Damage:** 4d6\n**RoF:** 1\n**Concealable?** NO\n**Examples:** Chainsaw, Sledgehammer, Helicopter Blades, Naginata",
-        "summary" : "**Damage:** 4d6\n**RoF:** 1\n**Concealable?** NO"
+        "summary" : "**Damage:** 4d6\n**RoF:** 1\n**Concealable?** NO",
+        "page" : 340
     },
     {
         "name" : "Combat Knife",
         "cost" : "50",
         "type" : "Light Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Tomahawk",
         "cost" : "50",
         "type" : "Light Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Baseball Bat",
         "cost" : "50",
         "type" : "Medium Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Crowbar",
         "cost" : "50",
         "type" : "Medium Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Machete",
         "cost" : "50",
         "type" : "Medium Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Lead Pipe",
         "cost" : "100",
         "type" : "Heavy Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Sword",
         "cost" : "100",
         "type" : "Heavy Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Spiked Bat",
         "cost" : "100",
         "type" : "Heavy Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Chainsaw",
         "cost" : "500",
         "type" : "Very Heavy Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Sledgehammer",
         "cost" : "500",
         "type" : "Very Heavy Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Helicopter Blades",
         "cost" : "500",
         "type" : "Very Heavy Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     },
     {
         "name" : "Naginata",
         "cost" : "500",
         "type" : "Very Heavy Melee Weapon",
         "desc" : "",
-        "summary" : ""
+        "summary" : "",
+        "page" : 340
     }
 ]
         

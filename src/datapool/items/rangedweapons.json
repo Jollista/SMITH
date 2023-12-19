@@ -2,273 +2,320 @@
     {
         "name" : "Medium Pistol",
         "cost" : "50",
-        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 2d6 \n**Standard Magazine:** 12 (M Pistol) \n**Rate of Fire (RoF):** 2 \n**Hands Required:** 1 \n **Concealable?** YES \n**Alt. Fire Modes & Special Features:** None"
+        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 2d6 \n**Standard Magazine:** 12 (M Pistol) \n**Rate of Fire (RoF):** 2 \n**Hands Required:** 1 \n **Concealable?** YES \n**Alt. Fire Modes & Special Features:** None",
+        "page" : 341
     },
     {
         "name" : "Heavy Pistol",
         "cost" : "100",
-        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 3d6 \n**Standard Magazine:** 8 (H Pistol) \n**Rate of Fire (RoF):** 2 \n**Hands Required:** 1 \n **Concealable?** YES \n**Alt. Fire Modes & Special Features:** None"
+        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 3d6 \n**Standard Magazine:** 8 (H Pistol) \n**Rate of Fire (RoF):** 2 \n**Hands Required:** 1 \n **Concealable?** YES \n**Alt. Fire Modes & Special Features:** None",
+        "page" : 341
     },
     {
         "name" : "Very Heavy Pistol",
         "cost" : "100",
-        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 4d6 \n**Standard Magazine:** 8 (VH Pistol) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 1 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** None"
+        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 4d6 \n**Standard Magazine:** 8 (VH Pistol) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 1 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** None",
+        "page" : 341
     },
     {
         "name" : "SMG",
         "cost" : "100",
-        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 2d6 \n**Standard Magazine:** 30 (M Pistol) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 1 \n **Concealable?** YES \n**Alt. Fire Modes & Special Features:** Autofire (3) + Supressive Fire"
+        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 2d6 \n**Standard Magazine:** 30 (M Pistol) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 1 \n **Concealable?** YES \n**Alt. Fire Modes & Special Features:** Autofire (3) + Supressive Fire",
+        "page" : 341
     },
     {
         "name" : "Heavy SMG",
         "cost" : "100",
-        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 3d6 \n**Standard Magazine:** 40 (H Pistol) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 1 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Autofire (3) + Supressive Fire"
+        "desc" : "**Weapon Skill:** Handgun \n**Single Shot Damage:** 3d6 \n**Standard Magazine:** 40 (H Pistol) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 1 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Autofire (3) + Supressive Fire",
+        "page" : 341
     },
     {
         "name" : "Shotgun",
         "cost" : "500",
-        "desc" : "**Weapon Skill:** Shoulder Arms \n**Single Shot Damage:** 5d6 \n**Standard Magazine:** 4 (Slug) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Shotgun Shell"
+        "desc" : "**Weapon Skill:** Shoulder Arms \n**Single Shot Damage:** 5d6 \n**Standard Magazine:** 4 (Slug) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Shotgun Shell",
+        "page" : 341
     },
     {
         "name" : "Assault Rifle",
         "cost" : "500",
-        "desc" : "**Weapon Skill:** Shoulder Arms \n**Single Shot Damage:** 5d6 \n**Standard Magazine:** 25 (Rifle) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Autofire (4) + Supressive Fire"
+        "desc" : "**Weapon Skill:** Shoulder Arms \n**Single Shot Damage:** 5d6 \n**Standard Magazine:** 25 (Rifle) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Autofire (4) + Supressive Fire",
+        "page" : 341
     },
     {
         "name" : "Sniper Rifle",
         "cost" : "500",
-        "desc" : "**Weapon Skill:** Shoulder Arms \n**Single Shot Damage:** 5d6 \n**Standard Magazine:** 4 (Rifle) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** None"
+        "desc" : "**Weapon Skill:** Shoulder Arms \n**Single Shot Damage:** 5d6 \n**Standard Magazine:** 4 (Rifle) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** None",
+        "page" : 341
     },
     {
         "name" : "Bows & Crossbows",
         "cost" : "100",
-        "desc" : "**Weapon Skill:** Archery \n**Single Shot Damage:** 4d6 \n**Standard Magazine:** N/A (Arrow) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Arrows"
+        "desc" : "**Weapon Skill:** Archery \n**Single Shot Damage:** 4d6 \n**Standard Magazine:** N/A (Arrow) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Arrows",
+        "page" : 341
     },
     {
         "name" : "Grenade Launcher",
         "cost" : "500",
-        "desc" : "**Weapon Skill:** Heavy Weapons \n**Single Shot Damage:** 6d6 \n**Standard Magazine:** 2 (Grenade) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Explosive"
+        "desc" : "**Weapon Skill:** Heavy Weapons \n**Single Shot Damage:** 6d6 \n**Standard Magazine:** 2 (Grenade) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Explosive",
+        "page" : 341
     },
     {
         "name" : "Rocket Launcher",
         "cost" : "500",
-        "desc" : "**Weapon Skill:** Heavy Weapons \n**Single Shot Damage:** 8d6 \n**Standard Magazine:** 1 (Rocket) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Explosive"
+        "desc" : "**Weapon Skill:** Heavy Weapons \n**Single Shot Damage:** 8d6 \n**Standard Magazine:** 1 (Rocket) \n**Rate of Fire (RoF):** 1 \n**Hands Required:** 2 \n **Concealable?** NO \n**Alt. Fire Modes & Special Features:** Explosive",
+        "page" : 341
     },
     {
         "name" : "Dai Lung Streetmaster",
         "cost" : "20",
         "type" : "Medium Pistol",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Dai Lung Magnum",
         "cost" : "50",
         "type" : "Heavy Pistol",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Federated Arms \"Super Chief\"",
         "cost" : "50",
         "type" : "Very Heavy Pistol",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "GunMart \"Sherwood\"",
         "cost" : "50",
         "type" : "Bow",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "GunMart \"Hunter\"",
         "cost" : "50",
         "type" : "Crossbow",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Federated Arm Tech-Assault III",
         "cost" : "50",
         "type" : "SMG",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Chadran Arms \"City Repear\"",
         "cost" : "50",
         "type" : "Heavy SMG",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "GunMart \"Home Defender\"",
         "cost" : "100",
         "type" : "Shotgun",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Chadran Armms \"Jungle Repear\"",
         "cost" : "100",
         "type" : "Assault Rifle",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "GunMart \"Snipe-Star\"",
         "cost" : "100",
         "type" : "Sniper Rifle",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Towa Manufacturing Type-G",
         "cost" : "100",
         "type" : "Grenade Launcher",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Towa Manufacturing Type-R",
         "cost" : "100",
         "type" : "Rocket Launcher",
-        "desc" : "Quality: Poor"
+        "desc" : "Quality: Poor",
+        "page" : 342
     },
     {
         "name" : "Federated Arms X-9mm",
         "cost" : "50",
         "type" : "Medium Pistol",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Mustang Arms\"Mark III\"",
         "cost" : "100",
         "type" : "Heavy Pistol",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Sternmeyer P-35",
         "cost" : "100",
         "type" : "Very Heavy Pistol",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Eagletech \"Tomcat\"",
         "cost" : "100",
         "type" : "Bow",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Eagletech \"Striker\"",
         "cost" : "100",
         "type" : "Crossbow",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Militech \"Mini-Gat\"",
         "cost" : "100",
         "type" : "SMG",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Sternmeyer SMG-21",
         "cost" : "100",
         "type" : "Heavy SMG",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Arasaka \"Rapid Assault\"",
         "cost" : "500",
         "type" : "Shotgun",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Militech \"Ronin\"",
         "cost" : "500",
         "type" : "Assault Rifle",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Nomad \"Long Rifle\"",
         "cost" : "500",
         "type" : "Sniper Rifle",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Militech \"Mini-Grenade\"",
         "cost" : "500",
         "type" : "Grenade Launcher",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Militech \"Urban\"",
         "cost" : "500",
         "type" : "Rocket Launcher",
-        "desc" : "Quality: Standard"
+        "desc" : "Quality: Standard",
+        "page" : 342
     },
     {
         "name" : "Militech \"Avenger\"",
         "cost" : "100",
         "type" : "Medium Pistol",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Nova \"Cityhunter\"",
         "cost" : "500",
         "type" : "Heavy Pistol",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Militech \"Boomer Buster\"",
         "cost" : "500",
         "type" : "Very Heavy Pistol",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Eagletech \"BBearcat\"",
         "cost" : "500",
         "type" : "Bow",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Eagletech \"Scropion\"",
         "cost" : "500",
         "type" : "Crossbow",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Arasaka \"Minami 10\"",
         "cost" : "500",
         "type" : "SMG",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Militech \"Viper\"",
         "cost" : "500",
         "type" : "Heavy SMG",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Militech \"Bulldog\"",
         "cost" : "1000",
         "type" : "Shotgun",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Militech \"Dragon\"",
         "cost" : "1000",
         "type" : "Assault Rifle",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Arasaka WSSA Sniper System",
         "cost" : "1000",
         "type" : "Sniper Rifle",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Tsunami Arms Type-18",
         "cost" : "1000",
         "type" : "Grenade Launcher",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     },
     {
         "name" : "Militech \"Hotshot\"",
         "cost" : "1000",
         "type" : "Rocket Launcher",
-        "desc" : "Quality: Excellent"
+        "desc" : "Quality: Excellent",
+        "page" : 342
     }
 ]
         
