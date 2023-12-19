@@ -233,13 +233,17 @@ router.post('/', async (request, env) => {
               else
                 message += `${entry['desc']}\n\n`;
             }
-            
-            message += `*${entry['cost']} EB*`;
+
+            //cost and type
+            message += `*${entry['cost']} EB`;
 
             if (Object.prototype.hasOwnProperty.call(entry, 'type')) 
             {
-              message += ` *| ${entry['type']}*`;
+              message += ` | ${entry['type']}`;
             }
+
+            //page number
+            message += `CPR ${entry['page']}*`;
           }
           else //item not found
           {
