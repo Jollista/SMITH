@@ -164,7 +164,7 @@ router.post('/', async (request, env) => {
             .eq('id', userID)
 
           //if full text authorized
-          if (auth_data['data'][0] != undefined && auth_data['data'][0]['id'] == 1) //auth_data['data'][0] != undefined
+          if (auth_data['data'][0] != undefined)
           {
             message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
             
@@ -221,7 +221,7 @@ router.post('/', async (request, env) => {
 
             message = `>>> ## ${entry['name']}\n`
             //if full text authorized
-            if (auth_data['data'][0] != undefined && auth_data['data'][0]['id'] == 1) // auth_data['data'][0] != undefined
+            if (auth_data['data'][0] != undefined)
             {
               message += `${entry['desc']}\n\n`;
             }
@@ -263,7 +263,7 @@ router.post('/', async (request, env) => {
        */
       case VERIFY_COMMAND.name.toLowerCase(): {
         //if password is correct
-        if (interaction['data']['options'][0]['value'].toUpperCase() == 'PNEUMO')
+        if (interaction['data']['options'][0]['value'].toUpperCase() == 'PNUEMO')
         {
           //if user is authorized for full text
           const { error } = await supabase
