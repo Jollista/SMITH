@@ -164,7 +164,7 @@ router.post('/', async (request, env) => {
             .eq('id', userID)
 
           //if full text authorized
-          if (auth_data['data'][0] != undefined)
+          if (1 == 0) //auth_data['data'][0] != undefined
           {
             message += `## ${rule}\n${data[0]['text']}\n\n*CPR ${data[0]['page']}*`;
             
@@ -221,7 +221,7 @@ router.post('/', async (request, env) => {
 
             message = `>>> ## ${entry['name']}\n`
             //if full text authorized
-            if (auth_data['data'][0] != undefined)
+            if (1 == 0) // auth_data['data'][0] != undefined
             {
               message += `${entry['desc']}\n\n`;
             }
