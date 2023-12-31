@@ -99,11 +99,10 @@ router.post('/', async (request, env) => {
         message += `**${label}:** ${number}d${dietype} (`;
 
         var rolls = getRoll(dietype, number, explodes); //get all the rolls
-        var roll;
         var total = 0; //sum total of rolls
         for (let i = 0; i < rolls.length; i++)
         {
-          roll = rolls[i]; //get roll from rolls
+          var roll = rolls[i]; //get roll from rolls
           total += roll; //add to total
 
           if (i > 0) //if not first roll, prepend

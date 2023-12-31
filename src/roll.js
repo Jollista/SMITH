@@ -13,12 +13,12 @@ function getRoll(max, number = 1, explodes = false) {
     {
       if (roll == max) //explode
       {
-        var roll = randInt(max);
+        roll = randInt(max);
         rolls.push(roll);
       }
       else if (roll == 1) //implode
       {
-        var roll = -1*randInt(max);
+        roll = -1*randInt(max);
         rolls.push(roll);
       }
     }
