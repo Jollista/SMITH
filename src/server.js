@@ -74,23 +74,26 @@ router.post('/', async (request, env) => {
         // Send a message into the channel where command was triggered from
         //get user ID for pinging
         console.log(JSON.stringify(interaction));
-        //const userId = interaction['user']['id'];
         
         //get arguments
         //dietype
         var dietype = interaction.data['options'][0]['value'];
         //get modifier
-        var modifier = Object.prototype.hasOwnProperty.call(interaction.data['options'], 1,) && interaction.data['options'][1]['name'] == 'modifier' ? interaction.data['options'][1]['value'] : 0;
+        var modifier = getOption(interaction.data['options'], 'modifier');
+        modifier = (modifier == null) ? 0 : modifier; //default if option not given
+        //get number
+        var number = getOption(interaction.data['options'], 'number');
+        number = (number == null || number < 0) ? 1 : number; //default if option not given or invalid
         //get label
-        var label = Object.prototype.hasOwnProperty.call(interaction.data['options'], 2,) ? interaction.data['options'][2]['value'] : 'Roll';
-        label = (Object.prototype.hasOwnProperty.call(interaction.data['options'], 1,) && interaction.data['options'][1]['name'] == 'label') ? interaction.data['options'][1]['value'] : label;
+        var label = getOption(interaction.data['options'], 'modifier');
+        label = (label == null) ? 'Roll' : label; //default if option not given
         
         //output vars
         var roll;
         message = `<@${userID}>\n`;
         message += `**${label}:** `;
 
-        if (dietype == 'd10') {
+        if (dietype == 10) {
           console.log('modifier is ' + modifier);
           roll = getRoll(10, modifier, true);
           console.log('modified roll is ' + roll);

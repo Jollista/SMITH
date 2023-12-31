@@ -44,23 +44,25 @@ export const ROLL_COMMAND = {
   description: 'Roll a d10',
   options: [
     {
-      type: 3,
-      name: 'type',
-      description: 'Type of dice to roll',
+      type: 4, //int
+      name: 'd',
+      description: 'Type of dice to roll (d10, d6, d100, etc.)',
       required: true,
-      choices: [
-        { name: 'd10', value: 'd10' },
-        { name: 'd6', value: 'd6' },
-      ],
     },
     {
-      type: 4,
+      type: 4, //int
       name: 'modifier',
-      description: 'Modifier to a d10 roll, or the number of d6s to roll',
+      description: 'Modifier to add or subtract from a roll',
       required: false,
     },
     {
-      type: 3,
+      type: 4, //int
+      name: 'number',
+      description: 'Number of dice to roll',
+      required: false,
+    },
+    {
+      type: 3, //string
       name: 'label',
       description: 'Label of the roll',
       required: false,

@@ -60,3 +60,14 @@ export function charactersIn(characters, string)
 
   return true;
 }
+
+export function getOption(options, optionName)
+{
+  for (let option in options) {
+    if (option['name'] === optionName)
+    {
+      return option['value'];
+    }
+  }
+  return null;
+}
