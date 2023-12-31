@@ -85,6 +85,7 @@ router.post('/', async (request, env) => {
         console.log(`modifier = ${modifier}`);
         //get number
         var number = getOption(interaction.data['options'], 'number');
+        console.log(`number = ${number}`);
         number = (number == null || number < 0) ? 1 : number; //default if option not given or invalid
         console.log(`number = ${number}`);
         //get label
@@ -94,46 +95,32 @@ router.post('/', async (request, env) => {
         var explodes = (dietype == 10 && number == 1)? true : false;
         
         //output vars
-        var roll;
         message = `<@${userID}>\n`;
-        message += `**${label}:** `;
+        message += `**${label}:** ${number}d${dietype}(`;
 
-        if (dietype == 10 && number == 1) {
-          roll = getRoll(10, modifier, true);
-          message += '1d10 (';
+        var rolls = getRoll(dietype, number, explodes); //get all the rolls
+        var total = 0; //sum total of rolls
+        for (let i = 0; i < rolls.length; i++)
+        {
+          var roll = rolls[i]; //get roll from rolls
+          total += roll; //add to total
 
-          //format output
-          if (roll - modifier >= 10) {
-            message += '**10**) + 1d10 (' + (roll - modifier - 10);
-          } else if (roll - modifier <= 0) {
-            message += '1) - 1d10 (' + Math.abs(roll - modifier - 1);
-          } else {
-            message += roll - modifier;
+          if (i > 0) //if not first roll, prepend +/-
+          {
+            if (roll > 0)
+              message += ` + `;
+            else
+              message += ` - `;
           }
-          message += ') + ' + modifier;
-          message += '\n**Result:** ' + roll;
-        } //d6 roll
-        else {
-          //number of dice rolled must be at least 1
-          modifier = Math.max(modifier, 1);
-          var total = 0;
-          message += `${modifier}d6 (`;
 
-          //for each roll to make
-          for (var i = 0; i < modifier; i++) {
-            roll = getRoll(6);
-            total += roll;
-
-            //bold sixes
-            if (roll == 6) message += '**6**';
-            else message += roll;
-
-            //not last roll
-            if (i + 1 != modifier) message += ', ';
-          }
-          message += ')';
-          message += `\n**Result:** ${total}`;
+          //bold if max
+          if (roll == dietype)
+            message += `**${roll}**`;
+          else
+            message += roll;
         }
+
+        message += `) + ${modifier}\n**Result:** ${total+modifier}`;
 
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
