@@ -63,7 +63,9 @@ export function charactersIn(characters, string)
 
 export function getOption(options, optionName)
 {
+  console.log(`options is ${options}`);
   for (let option in options) {
+    
     if (option['name'] === optionName)
     {
       return option['value'];

@@ -10,7 +10,7 @@ import {
 } from 'discord-interactions';
 import { ROLL_COMMAND, RULE_COMMAND, ITEM_COMMAND, VERIFY_COMMAND } from './commands.js';
 import { getRoll } from './roll.js';
-import { autocomplete, findEntryInJSON } from './lookup.js';
+import { autocomplete, findEntryInJSON, getOption } from './lookup.js';
 import { createClient } from '@supabase/supabase-js';
 
 class JsonResponse extends Response {
@@ -73,20 +73,24 @@ router.post('/', async (request, env) => {
       case ROLL_COMMAND.name.toLowerCase(): {
         // Send a message into the channel where command was triggered from
         //get user ID for pinging
-        console.log(JSON.stringify(interaction));
+        console.log(JSON.stringify(interaction.data['options']));
         
         //get arguments
         //dietype
         var dietype = interaction.data['options'][0]['value'];
+        console.log(`dietype = ${dietype}`);
         //get modifier
         var modifier = getOption(interaction.data['options'], 'modifier');
         modifier = (modifier == null) ? 0 : modifier; //default if option not given
+        console.log(`modifier = ${modifier}`);
         //get number
         var number = getOption(interaction.data['options'], 'number');
         number = (number == null || number < 0) ? 1 : number; //default if option not given or invalid
+        console.log(`number = ${number}`);
         //get label
         var label = getOption(interaction.data['options'], 'modifier');
         label = (label == null) ? 'Roll' : label; //default if option not given
+        console.log(`label = ${label}`);
         
         //output vars
         var roll;
