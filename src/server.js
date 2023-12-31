@@ -89,7 +89,7 @@ router.post('/', async (request, env) => {
         number = (number == null || number < 0) ? 1 : number; //default if option not given or invalid
         console.log(`number = ${number}`);
         //get label
-        var label = getOption(interaction.data['options'], 'modifier');
+        var label = getOption(interaction.data['options'], 'label');
         label = (label == null) ? 'Roll' : label; //default if option not given
         console.log(`label = ${label}`);
         var explodes = (dietype == 10 && number == 1)? true : false;

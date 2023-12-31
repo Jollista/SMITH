@@ -63,9 +63,11 @@ export function charactersIn(characters, string)
 
 export function getOption(options, optionName)
 {
-  console.log(`options is ${options}`);
-  for (let option in options) {
-    
+  console.log(`options is ${JSON.stringify(options)}`);
+  for (let i = 0; i < options.length; i++) 
+  {
+    var option = options[i];
+    console.log(`option is ${JSON.stringify(option)}`);
     if (option['name'] === optionName)
     {
       return option['value'];
