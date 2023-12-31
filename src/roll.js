@@ -1,19 +1,30 @@
 export { getRoll };
 
-function getRoll(max, modifier = 0, explodes = false) {
-  var roll = randInt(max);
-  console.log('Roll is ' + roll);
-
-  //check for crit
-  if (explodes && roll == max) {
-    //explode
-    roll += randInt(max);
-  } else if (explodes && roll == 1) {
-    //implode
-    roll -= randInt(max);
+function getRoll(max, number = 1, explodes = false) {
+  var rolls = [];
+  for (let i = 0; i < number; i++) 
+  {
+    //get roll
+    var roll = randInt(max);
+    rolls.push(roll);
+    
+    //crit check
+    if (explodes)
+    {
+      if (roll == max) //explode
+      {
+        var roll = randInt(max);
+        rolls.push(roll);
+      }
+      else if (roll == 1) //implode
+      {
+        var roll = -1*randInt(max);
+        rolls.push(roll);
+      }
+    }
   }
 
-  return roll + modifier;
+  return rolls;
 }
 
 //returns a random integer between 1 and max, inclusive

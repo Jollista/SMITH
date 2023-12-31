@@ -91,16 +91,15 @@ router.post('/', async (request, env) => {
         var label = getOption(interaction.data['options'], 'modifier');
         label = (label == null) ? 'Roll' : label; //default if option not given
         console.log(`label = ${label}`);
+        var explodes = (dietype == 10 && number == 1)? true : false;
         
         //output vars
         var roll;
         message = `<@${userID}>\n`;
         message += `**${label}:** `;
 
-        if (dietype == 10) {
-          console.log('modifier is ' + modifier);
+        if (dietype == 10 && number == 1) {
           roll = getRoll(10, modifier, true);
-          console.log('modified roll is ' + roll);
           message += '1d10 (';
 
           //format output
