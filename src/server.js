@@ -96,7 +96,7 @@ router.post('/', async (request, env) => {
         
         //output vars
         message = `<@${userID}>\n`;
-        message += `**${label}:** ${number}d${dietype}(`;
+        message += `**${label}:** ${number}d${dietype} (`;
 
         var rolls = getRoll(dietype, number, explodes); //get all the rolls
         var total = 0; //sum total of rolls
@@ -105,13 +105,8 @@ router.post('/', async (request, env) => {
           var roll = rolls[i]; //get roll from rolls
           total += roll; //add to total
 
-          if (i > 0) //if not first roll, prepend +/-
-          {
-            if (roll > 0)
-              message += ` + `;
-            else
-              message += ` - `;
-          }
+          if (i > 0) //if not first roll, prepend
+            message += `, `;
 
           //bold if max
           if (roll == dietype)
