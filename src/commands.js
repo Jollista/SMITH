@@ -121,3 +121,47 @@ export const VERIFY_COMMAND = {
   ],
   type: 1,
 };
+
+export const CUSTOM_COMMAND = {
+  name: 'custom',
+  description: 'Add custom content',
+  options: [
+    {
+      type: 2, //subcommand group
+      name: 'item',
+      description: 'Add, edit, or remove custom items',
+      options: [
+        {
+          type: 1, //subcommand
+          name: "add",
+          description: "Add a custom item",
+          options: [
+            {
+              type: 3,
+              name: "name",
+              description: "Name of the item to add",
+              required: true
+            },
+            {
+              type: 3,
+              name: "description",
+              description: "Description of the item",
+              required: true
+            },
+            {
+              type: 4,
+              name: "cost",
+              description: "Cost of the item",
+              required: true
+            },
+          ]
+        }
+      ]
+    },
+    {
+      type: 2, //subcommand group
+      name: 'rule',
+      description: 'Add, edit, or remove custom rules',
+    }
+  ],
+};
