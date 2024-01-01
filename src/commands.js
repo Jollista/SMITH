@@ -155,6 +155,42 @@ export const CUSTOM_COMMAND = {
               required: true
             },
           ]
+        },
+        {
+          type: 1, //subcommand
+          name: "edit",
+          description: "Edit a custom item",
+          options:[
+            {
+              type: 3,
+              name: "name",
+              description: "Name of the item to edit",
+              required: true
+            },
+            {
+              type: 3,
+              name: "description",
+              description: "New description",
+            },
+            {
+              type: 4,
+              name: "cost",
+              description: "New cost",
+            },
+          ]
+        },
+        {
+          type: 1, //subcommand
+          name: "delete",
+          description: "Delete a custom item",
+          options:[
+            {
+              type: 3,
+              name: "name",
+              description: "Name of the item to delete",
+              required: true
+            },
+          ]
         }
       ]
     },
@@ -162,6 +198,58 @@ export const CUSTOM_COMMAND = {
       type: 2, //subcommand group
       name: 'rule',
       description: 'Add, edit, or remove custom rules',
-    }
+      options: [
+        {
+          type: 1, //subcommand
+          name: "add",
+          description: "Add a custom rule",
+          options: [
+            {
+              type: 3,
+              name: "name",
+              description: "Name of the rule to add",
+              required: true
+            },
+            {
+              type: 3,
+              name: "description",
+              description: "Description of the rule",
+              required: true
+            },
+          ]
+        },
+        {
+          type: 1, //subcommand
+          name: "edit",
+          description: "Edit a custom rule",
+          options:[
+            {
+              type: 3,
+              name: "name",
+              description: "Name of the rule to edit",
+              required: true
+            },
+            {
+              type: 3,
+              name: "description",
+              description: "New description",
+            },
+          ]
+        },
+        {
+          type: 1, //subcommand
+          name: "delete",
+          description: "Delete a custom rule",
+          options:[
+            {
+              type: 3,
+              name: "name",
+              description: "Name of the rule to delete",
+              required: true
+            },
+          ]
+        }
+      ]
+    },
   ],
 };
