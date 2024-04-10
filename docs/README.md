@@ -45,16 +45,6 @@ Pull up a rule.
 
 ![rules](img/datapool-rules.gif)
 
-### Verify
-
-Without first verifying your access to the Cyberpunk RED core rulebook, you are not permitted to access the full ruleset with this bot. You will only be shown summaries of information when using the item and rule commands.
-
-> /verify {password}
-
-- `password` - required; password found in the Cyberpunk RED core rulebook to enable full access to ruleset information
-
-![verify](img/datapool-verify.gif)
-
 ## Disclaimer
 
 DATA.POOL is unofficial content provided under the [Homebrew Content Policy of R. Talsorian Games](https://rtalsoriangames.com/homebrew-content-policy/) and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
