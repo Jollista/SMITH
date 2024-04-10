@@ -63,7 +63,7 @@ router.post('/', async (request, env) => {
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     console.log(JSON.stringify(interaction));
     const userID = (Object.prototype.hasOwnProperty.call(interaction, 'member')) ? interaction['member']['user']['id'] : interaction['user']['id'];
-    const globalName = (Object.prototype.hasOwnProperty.call(interaction, 'member')) ? interaction['member']['user']['global_name'] : interaction['user']['global_name'];
+    //const globalName = (Object.prototype.hasOwnProperty.call(interaction, 'member')) ? interaction['member']['user']['global_name'] : interaction['user']['global_name'];
 
     // Most user commands will come as `APPLICATION_COMMAND`.
     switch (interaction.data.name.toLowerCase()) {
